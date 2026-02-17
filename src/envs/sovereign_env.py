@@ -48,7 +48,7 @@ class SovereignRiskEnv(gym.Env):
         if seed is not None:
             self.rng = np.random.default_rng(seed)
 
-        debt_ratio = float(self.rng.uniform(0.4, 1.2))
+        debt_ratio = float(self.rng.uniform(0.5, 1.5))
         gdp_growth = float(self.rng.uniform(-0.02, 0.03))
         inflation = float(self.rng.uniform(0.02, 0.08))
         climate_shock = float(self.rng.uniform(0.0, 0.3))
@@ -72,7 +72,7 @@ class SovereignRiskEnv(gym.Env):
         if action == 0:  # do nothing
             growth += -0.01 * shock
             infl += 0.005 * shock
-            debt += 0.01 + 0.02 * shock
+            debt += 0.02 + 0.05 * shock
 
         elif action == 1:  # austerity
             growth += -0.01 - 0.01 * shock
