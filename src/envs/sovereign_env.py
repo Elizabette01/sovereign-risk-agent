@@ -112,6 +112,9 @@ class SovereignRiskEnv(gym.Env):
 
         # termination conditions (toy)
         terminated = bool(debt >= 1.8)  # "default-like" threshold
+        if terminated:
+            reward -= 200.0
+
         self.t += 1
         truncated = bool(self.t >= self.max_steps)
 
