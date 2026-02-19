@@ -6,11 +6,9 @@ from src.agents.discretizer import discretize_state
 from src.agents.q_table import QTable
 
 
-def epsilon_greedy(qt: QTable, s, epsilon: float) -> int:
-    # With probability epsilon: explore (random action)
-    if np.random.rand() < epsilon:
-        return np.random.randint(qt.n_actions)
-    # Otherwise: exploit (best known action)
+def epsilon_greedy(qt: QTable, s, epsilon: float, rng: np.random.Generator) -> int:
+    if rng.random() < epsilon:
+        return int(rng.integers(0, qt.n_actions))
     return qt.best_action(s)
 
 
@@ -26,6 +24,7 @@ def train(
     
 
     env = SovereignRiskEnv(seed=seed)
+    rng = np.random.default_rng(seed)
     qt = QTable.create(n_bins=n_bins, n_actions=env.action_space.n)
 
     print(f"Starting Q-learning: episodes={n_episodes}, bins={n_bins}, actions={env.action_space.n}")
@@ -45,7 +44,7 @@ def train(
         truncated = False
 
         for t in range(env.max_steps):
-            a = epsilon_greedy(qt, s, epsilon)
+            a = epsilon_greedy(qt, s, epsilon, rng)
 
             next_obs, r, terminated, truncated, _ = env.step(a)
             s2 = discretize_state(next_obs, n_bins=n_bins)
