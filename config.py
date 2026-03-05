@@ -21,10 +21,10 @@ for directory in [RAW_DATA_DIR, PROCESSED_DATA_DIR, MODELS_DIR, FIGURES_DIR]:
 # Data settings
 # List of countries to include in the analysis, categorized by development status
 COUNTRIES = [
-    'USA', 'JPN', 'DEU', 'GBR', 'FRA', 'CAN', 'AUS', 'CHE', 'NLD', 'SWE'  # Advanced
-    'MEX', 'CHN','TUR', 'ZAF', 'BRA', 'IND', 'IDN', 'THA', 'MYS','PHL'  # Emerging
-    'NGA','BGD', 'KEN', 'VNM', 'GHA', 'PAK', 'EGY', 'MAR', 'LKA', 'BOL' # Developing
-    'AFG', 'CAF', 'NER', 'ETH', 'SSD', 'SOM', 'TCD', 'HTI', 'MWI', 'SLE'  # Underdeveloped
+    'USA', 'JPN', 'DEU', 'GBR', 'FRA', 'CAN', 'AUS', 'CHE', 'NLD', 'SWE',  # Advanced
+    'MEX', 'CHN','TUR', 'ZAF', 'BRA', 'IND', 'IDN', 'THA', 'MYS','PHL',  # Emerging
+    'NGA','BGD', 'KEN', 'VNM', 'GHA', 'PAK', 'EGY', 'MAR', 'LKA', 'BOL', # Developing
+    'AFG', 'CAF', 'NER', 'ETH', 'SSD', 'SOM', 'TCD', 'HTI', 'MWI', 'SLE',  # Underdeveloped
 ]
 
 START_YEAR = 2000
