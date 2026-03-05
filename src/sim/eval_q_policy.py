@@ -45,5 +45,5 @@ def evaluate(qt: QTable, n_episodes: int = 50, n_bins: int = 5, seed: int = 123)
 
 
 if __name__ == "__main__":
-    qt = train(n_episodes=2000, n_bins=5)  # trains then evaluates
-    evaluate(qt, n_episodes=50, n_bins=5)
+    qt = train(n_episodes=10000, n_bins=7)  # trains then evaluates
+    evaluate(qt, n_episodes=50, n_bins=7)

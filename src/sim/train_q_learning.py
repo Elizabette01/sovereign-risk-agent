@@ -13,8 +13,8 @@ def epsilon_greedy(qt: QTable, s, epsilon: float, rng: np.random.Generator) -> i
 
 
 def train(
-    n_episodes: int = 2000,
-    n_bins: int = 5,
+    n_episodes: int = 10000,
+    n_bins: int = 7,
     alpha: float = 0.10,     # learning rate
     gamma: float = 0.95,     # discount factor
     epsilon_start: float = 1.0,
@@ -71,12 +71,12 @@ def train(
         })
 
         # small progress print
-        if (ep + 1) % 20 == 0:
+        if (ep + 1) % 500 == 0:
             df_tmp = pd.DataFrame(episode_log[-200:])
             print(
                 f"ep {ep+1}/{n_episodes} | "
-                f"avg_reward(last20)={df_tmp['total_reward'].mean():.2f} | "
-                f"default_rate(last20)={df_tmp['terminated'].mean():.2%} | "
+                f"avg_reward(last500)={df_tmp['total_reward'].mean():.2f} | "
+                f"default_rate(last500)={df_tmp['terminated'].mean():.2%} | "
                 f"epsilon={epsilon:.2f}"
             )
 
