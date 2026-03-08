@@ -1,11 +1,8 @@
 """
 Data Download Script 
 
-This script downloads fiscal, economic, and climate data from various sources.
-Sources:
-- World Bank API for economic indicators
-- IMF WEO for fiscal data (csv imported)
-- EM-DAT for climate disaster data (csv imported from:https://public.emdat.be/data)
+This script downloads economic data using the World Bank API 
+
 """
 
 import pandas as pd
@@ -75,52 +72,119 @@ def download_world_bank_data():
         print(f"  Fetching {indicator_name}...")
         
         try:
-            # Fetch data from World Bank API
-            # wb.data.DataFrame fetches data for multiple countries at once
-            df = wb.data.DataFrame(
+            # Method that works: Use wb.data.fetch (returns generator)
+            data_generator = wb.data.fetch(
                 indicator_code,
                 wb_countries,
-                time=range(START_YEAR, END_YEAR + 1),
-                labels=True  # Use country names instead of codes
+                time=range(START_YEAR, END_YEAR + 1)
             )
             
-            # Reshape from wide to long format
-            df = df.reset_index()
-            df = df.melt(
-                id_vars=['economy'], 
-                var_name='year', 
-                value_name=indicator_name
-            )
-            df.rename(columns={'economy': 'country'}, inplace=True)
+            # Convert generator to list of records
+            records = []
+            for item in data_generator:
+                # Each item is a dict with: value, series, economy, aggregate, time
+                records.append({
+                    'country': item.get('economy', ''),
+                    'year': item.get('time', ''),
+                    indicator_name: item.get('value', None)
+                })
+            
+            if not records:
+                print(f"    ⚠️  No data returned for {indicator_name}")
+                continue
+            
+            # Convert to DataFrame
+            df = pd.DataFrame(records)
+            
+            # Clean year column (remove 'YR' prefix if present)
+            df['year'] = df['year'].astype(str).str.replace('YR', '', regex=False)
+            df['year'] = pd.to_numeric(df['year'], errors='coerce')
+            
+            # Drop rows with invalid data
+            df = df.dropna(subset=['year', 'country'])
+            df['year'] = df['year'].astype(int)
+            
+            print(f"    ✓ Downloaded: {len(df)} records")
+            print(f"    Sample values: {df[indicator_name].dropna().head(3).tolist()}")
             
             all_data.append(df)
-            
             time.sleep(0.5)  # Be polite to the API
             
         except Exception as e:
-            print(f"    ⚠️  Warning: Could not fetch {indicator_name}: {e}")
-            continue
+            print(f"    ✗ Error: {e}")
+            # Try fallback method with DataFrame
+            try:
+                print(f"    Trying alternative method...")
+                df = wb.data.DataFrame(
+                    indicator_code,
+                    wb_countries,
+                    time=range(START_YEAR, END_YEAR + 1),
+                    labels=False  # Use codes instead of names
+                )
+                
+                # Reset index and melt to long format
+                df = df.reset_index()
+                
+                # Find year columns (start with 'YR')
+                year_cols = [col for col in df.columns if str(col).startswith('YR')]
+                
+                if year_cols:
+                    # Melt to long format
+                    df_long = df.melt(
+                        id_vars=['economy'],
+                        value_vars=year_cols,
+                        var_name='year',
+                        value_name=indicator_name
+                    )
+                    
+                    df_long.rename(columns={'economy': 'country'}, inplace=True)
+                    df_long['year'] = df_long['year'].str.replace('YR', '', regex=False)
+                    df_long['year'] = pd.to_numeric(df_long['year'], errors='coerce')
+                    df_long = df_long.dropna(subset=['year'])
+                    df_long['year'] = df_long['year'].astype(int)
+                    
+                    print(f"    ✓ Alternative method worked: {len(df_long)} records")
+                    all_data.append(df_long)
+                else:
+                    print(f"    ✗ Alternative method also failed")
+                    
+            except Exception as e2:
+                print(f"    ✗ Both methods failed: {e2}")
+                continue
     
-    # Merge all indicators together
+    # Merge all indicators
     if all_data:
+        print(f"\n  Merging {len(all_data)} indicators...")
         wb_data = all_data[0]
-        for df in all_data[1:]:
+        
+        for i, df in enumerate(all_data[1:], 1):
+            print(f"    Merging {i+1}/{len(all_data)}...")
             wb_data = wb_data.merge(df, on=['country', 'year'], how='outer')
         
-        # Convert year to integer
-        wb_data['year'] = wb_data['year'].astype(int)
+        # Sort and clean
+        wb_data = wb_data.sort_values(['country', 'year']).reset_index(drop=True)
         
-        # Save to CSV
+        # Save
         output_path = RAW_DATA_DIR / 'world_bank_data.csv'
         wb_data.to_csv(output_path, index=False)
-        print(f"  ✓ Saved World Bank data: {output_path}")
+        
+        print(f"\n  ✓ Saved World Bank data: {output_path}")
         print(f"    Shape: {wb_data.shape[0]} rows, {wb_data.shape[1]} columns")
+        print(f"    Countries: {wb_data['country'].nunique()}")
+        print(f"    Year range: {wb_data['year'].min()}-{wb_data['year'].max()}")
+        
+        # Show data quality
+        print(f"\n  Data Quality:")
+        for col in wb_data.columns:
+            if col not in ['country', 'year']:
+                non_null = wb_data[col].notna().sum()
+                pct = (non_null / len(wb_data)) * 100
+                print(f"    {col}: {pct:.1f}% complete")
         
         return wb_data
     else:
-        print("  ✗ Failed to download World Bank data")
+        print("\n  ✗ No data downloaded successfully")
         return None
-
 
 # ============================================================================
 # MAIN EXECUTION
@@ -155,8 +219,6 @@ def main():
         
     except Exception as e:
         print(f"\n✗ Error during download: {e}")
-        import traceback
-        traceback.print_exc()
         return False
 
 
