@@ -24,7 +24,7 @@ from config import RAW_DATA_DIR, COUNTRIES, START_YEAR, END_YEAR
 print("="*60)
 print("SOVEREIGN CLIMATE RISK AI - DATA DOWNLOAD")
 print("="*60)
-print(f"Downloading data for {len(COUNTRIES)} countries")
+print(f"Downloading data for all countries")
 print(f"Time period: {START_YEAR}-{END_YEAR}")
 print("="*60)
 
@@ -60,12 +60,14 @@ def download_world_bank_data():
         'NE.IMP.GNFS.ZS': 'imports_gdp',
         'NY.GDP.PCAP.CD': 'gdp_per_capita',
         'SP.POP.TOTL': 'population',
+        'FI.RES.TOTL.CD': 'foreign_reserves',
+        'BN.CAB.XOKA.GD.ZS': 'current_account_balance'
+
     }
     
     # Convert our country codes to World Bank codes
     # World Bank uses ISO 3-letter codes (USA, JPN, DEU, etc.)
-    wb_countries = COUNTRIES  # Our config already uses correct codes
-    
+    wb_countries = 'all'     
     all_data = []
     
     for indicator_code, indicator_name in indicators.items():
@@ -108,7 +110,7 @@ def download_world_bank_data():
             print(f"    Sample values: {df[indicator_name].dropna().head(3).tolist()}")
             
             all_data.append(df)
-            time.sleep(0.5)  # Be polite to the API
+            time.sleep(0.5)  
             
         except Exception as e:
             print(f"    ✗ Error: {e}")
