@@ -27,5 +27,5 @@ COUNTRIES = [
     'AFG', 'CAF', 'NER', 'ETH', 'SSD', 'SOM', 'TCD', 'HTI', 'MWI', 'SLE',  # Underdeveloped
 ]
 
-START_YEAR = 2000
+START_YEAR = 1990
 END_YEAR = 2024
