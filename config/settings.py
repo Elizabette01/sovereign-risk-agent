@@ -30,7 +30,7 @@ FIGURES_DIR:  Path = RESULTS_DIR / "figures"
 MODELS_DIR:   Path = RESULTS_DIR / "models"
 LOGS_DIR:     Path = RESULTS_DIR / "logs"
 
-# Raw source files (never modified — treat as immutable)
+# Raw source files 
 RAW_FILES: dict[str, Path] = {
     "world_bank":       RAW_DATA_DIR / "world_bank_data.csv",
     "emdat":            RAW_DATA_DIR / "emdat_disaster_data.xlsx",
@@ -57,46 +57,37 @@ END_YEAR:   int = 2024
 # via World Bank income categories.
 #
 # Mapping rule:
-#   High income              → Advanced
-#   Upper middle income      → Emerging Market
-#   Lower middle income      → Developing
-#   Low income               → Developing   ← folded in; not a 4th category
+#   High income       ->        Advanced
+#   Upper middle income    ->   Emerging Market
+#   Lower middle income    ->   Developing
+#   Low income     ->     Developing  
 
 ECONOMY_TYPES: list[str] = ["Advanced", "Emerging Market", "Developing"]
 
-# Countries organised by economy type (ISO 3166-1 alpha-3 codes).
-# Selection criteria: data availability ≥ 20 years, geographic diversity.
-# Countries that fall below the MIN_YEARS_FOR_RL threshold after cleaning
-# are flagged and excluded in the cleaning pipeline, not here.
-COUNTRIES_BY_TYPE: dict[str, list[str]] = {
-    "Advanced": [
-        "USA", "JPN", "DEU", "GBR", "FRA",
-        "CAN", "AUS", "CHE", "NLD", "SWE",
-    ],
-    "Emerging Market": [
-        "CHN", "BRA", "IND", "MEX", "IDN",
-        "TUR", "ZAF", "THA", "MYS", "PHL",
-    ],
-    "Developing": [
-        "NGA", "BGD", "KEN", "VNM", "GHA",
-        "PAK", "EGY", "MAR", "LKA", "BOL",
-        "ETH", "MWI", "NER", "HTI", "SLE",
-    ],
-}
+# Country list — to be finalised after data exploration in wbg_data.ipynb.
+# Once you have reviewed coverage across all WB economies, uncomment and
+# populate COUNTRIES_BY_TYPE, then re-run the extraction pipeline.
+#
+# COUNTRIES_BY_TYPE: dict[str, list[str]] = {
+#     "Advanced": [
+#         "USA", "JPN", "DEU", "GBR", "FRA",
+#         "CAN", "AUS", "CHE", "NLD", "SWE",
+#     ],
+#     "Emerging Market": [
+#         "CHN", "BRA", "IND", "MEX", "IDN",
+#         "TUR", "ZAF", "THA", "MYS", "PHL",
+#     ],
+#     "Developing": [
+#         "NGA", "BGD", "KEN", "VNM", "GHA",
+#         "PAK", "EGY", "MAR", "LKA", "BOL",
+#         "ETH", "MWI", "NER", "HTI", "SLE",
+#     ],
+# }
 
-# Flat list — use when you need all countries regardless of type
-COUNTRIES: list[str] = [
-    country
-    for group in COUNTRIES_BY_TYPE.values()
-    for country in group
-]
-
-# Reverse lookup: ISO code → economy type
-COUNTRY_TO_ECONOMY_TYPE: dict[str, str] = {
-    country: etype
-    for etype, countries in COUNTRIES_BY_TYPE.items()
-    for country in countries
-}
+# Placeholder — both will be populated once COUNTRIES_BY_TYPE is uncommented above.
+COUNTRIES_BY_TYPE: dict[str, list[str]] = {}
+COUNTRIES: list[str] = []
+COUNTRY_TO_ECONOMY_TYPE: dict[str, str] = {}
 
 # World Bank income group label → dissertation economy type.
 # Used when classifying countries that are not in COUNTRIES_BY_TYPE above.
@@ -112,7 +103,7 @@ WB_INCOME_TO_ECONOMY_TYPE: dict[str, str] = {
 # Format: { WB_indicator_code: target_column_name }
 #
 # Columns prefixed with their economic concept for readability in downstream
-# code. Renaming happens once here so all scripts share the same column names.
+# code. 
 
 WB_INDICATORS: dict[str, str] = {
     # Output and growth
