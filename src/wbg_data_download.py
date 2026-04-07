@@ -17,8 +17,8 @@ warnings.filterwarnings('ignore')
 
 # Import project configuration
 import sys
-sys.path.append(str(Path(__file__).parent.parent.parent))
-from config import RAW_DATA_DIR, COUNTRIES, START_YEAR, END_YEAR
+sys.path.append(str(Path(__file__).resolve().parents[1]))
+from config import RAW_DATA_DIR, COUNTRIES, START_YEAR, END_YEAR, WB_INDICATORS
 
 
 print("="*60)
