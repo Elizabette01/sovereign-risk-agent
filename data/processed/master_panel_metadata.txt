@@ -1,0 +1,99 @@
+MASTER PANEL METADATA
+============================================================
+Generated   : 2026-04-10
+Rows        : 9,059
+Columns     : 51
+Countries   : 196
+Year range  : 1980 – 2029
+File size   : 3.18 MB
+
+COLUMN INVENTORY BY SOURCE
+------------------------------------------------------------
+
+[Identifiers]  (2 columns)
+  iso3                                             0.0% missing
+  year                                             0.0% missing
+
+[WEO (IMF World Economic Outlook)]  (15 columns)
+  weo_gdp_constant                                 1.0% missing
+  weo_gdp_current                                  0.7% missing
+  weo_gdp_per_capita                               2.0% missing
+  weo_gdp_deflator                                 1.7% missing
+  weo_govt_gross_debt                             26.1% missing
+  weo_primary_balance                             23.6% missing
+  weo_govt_revenue                                17.8% missing
+  weo_govt_expenditure                            18.2% missing
+  weo_fiscal_balance                              18.6% missing
+  weo_structural_balance                          66.5% missing
+  weo_output_gap                                  86.9% missing
+  weo_current_account                              5.0% missing
+  weo_inflation_cpi                                1.5% missing
+  weo_population                                   1.7% missing
+  weo_unemployment                                48.8% missing
+
+[IMF Central Government Debt]  (1 columns)
+  imf_cg_debt_to_gdp                              38.8% missing
+
+[World Bank WDI]  (8 columns)
+  wdi_gdp_current_usd                             28.4% missing
+  wdi_gdp_growth                                  28.7% missing
+  wdi_debt_to_gdp                                 82.2% missing
+  wdi_tax_revenue_gdp                             58.3% missing
+  wdi_gov_expenditure_gdp                         59.6% missing
+  wdi_inflation_cpi                               35.2% missing
+  wdi_inflation_deflator                          28.7% missing
+  wdi_current_account_gdp                         37.7% missing
+
+[EM-DAT Climate Disasters]  (3 columns)
+  climate_disaster_count                          68.2% missing
+  climate_damage_000usd                           68.2% missing
+  climate_damage_adj_000usd                       68.2% missing
+
+[ND-GAIN]  (6 columns)
+  ndgain_score                                    41.6% missing
+  ndgain_readiness                                40.8% missing
+  ndgain_vulnerability                            41.6% missing
+  ndgain_exposure                                 40.8% missing
+  ndgain_sensitivity                              43.0% missing
+  ndgain_capacity                                 44.7% missing
+
+[Income Classification (WB)]  (4 columns)
+  country_name                                     0.7% missing
+  Income group                                     1.7% missing
+  Lending category                                26.8% missing
+  economy_type                                     1.7% missing
+
+[INFORM Risk Index]  (8 columns)
+  inform_risk                                      3.9% missing
+  inform_natural_hazard                            3.9% missing
+  inform_drought                                   3.9% missing
+  inform_river_flood                               3.9% missing
+  inform_tropical_cyclone                          3.9% missing
+  inform_coastal_flood                             3.9% missing
+  inform_vulnerability                             3.9% missing
+  inform_lack_coping                               3.9% missing
+
+[Consolidated columns]  (4 columns)
+  debt_to_gdp                                     18.2% missing
+  gdp_growth                                       2.2% missing
+  inflation                                        1.1% missing
+  current_account_gdp                              3.0% missing
+
+CONSOLIDATED COLUMN PRIORITY LOGIC
+------------------------------------------------------------
+debt_to_gdp:
+  1. imf_cg_debt_to_gdp  (IMF central govt debt — best cross-country comparability)
+  2. weo_govt_gross_debt  (WEO general govt gross debt — broader but well-documented)
+  3. wdi_debt_to_gdp      (World Bank WDI — most sparse, last resort)
+
+gdp_growth:
+  1. weo_gdp_constant pct_change()  (computed within-country, consistent deflation methodology)
+  2. wdi_gdp_growth                 (WDI direct — for countries absent from WEO)
+
+inflation:
+  1. weo_inflation_cpi   (WEO CPI average — widest country-year coverage)
+  2. wdi_inflation_cpi   (WDI CPI — fallback for non-WEO economies)
+
+current_account_gdp:
+  1. weo_current_account      (WEO — widest coverage)
+  2. wdi_current_account_gdp  (WDI — fallback)
