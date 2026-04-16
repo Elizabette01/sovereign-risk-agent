@@ -1,0 +1,251 @@
+{
+  "gdp_growth_shocks": {
+    "Advanced_Low": {
+      "ar1_coef": 0.3166607012785333,
+      "mean": 1.1885442125441675e-15,
+      "std": 3.6920033250856847,
+      "skewness": 0.14793121398377515,
+      "kurtosis": 5.705209141632846,
+      "suggested_distribution": "t",
+      "t_df": 5.1,
+      "n_obs": 1100,
+      "fallback": false
+    },
+    "Advanced_Medium": {
+      "ar1_coef": 0.43698249055130056,
+      "mean": 8.120488408686859e-17,
+      "std": 5.942232608962931,
+      "skewness": 2.689074034765864,
+      "kurtosis": 23.162287552869756,
+      "suggested_distribution": "t",
+      "t_df": 4.3,
+      "n_obs": 350,
+      "fallback": false
+    },
+    "Advanced_High": {
+      "ar1_coef": -0.043632360894925074,
+      "mean": 5.450185757250769e-16,
+      "std": 7.7493733116231045,
+      "skewness": 0.13581782010337462,
+      "kurtosis": 2.1160686365879338,
+      "suggested_distribution": "normal",
+      "t_df": null,
+      "n_obs": 44,
+      "fallback": false
+    },
+    "Emerging_Market_Low": {
+      "ar1_coef": 0.3365278031554959,
+      "mean": 2.7203636169100977e-15,
+      "std": 4.926989862232877,
+      "skewness": -1.4063108353839187,
+      "kurtosis": 9.044800609924621,
+      "suggested_distribution": "t",
+      "t_df": 4.7,
+      "n_obs": 350,
+      "fallback": false
+    },
+    "Emerging_Market_Medium": {
+      "ar1_coef": 0.05565201942576295,
+      "mean": 2.6749844169792005e-16,
+      "std": 37.377349653896125,
+      "skewness": 3.37394777442765,
+      "kurtosis": 190.30196891450467,
+      "suggested_distribution": "t",
+      "t_df": 4.1,
+      "n_obs": 850,
+      "fallback": false
+    },
+    "Emerging_Market_High": {
+      "ar1_coef": -0.178369937963359,
+      "mean": -1.0027820867582059e-16,
+      "std": 6.527852415532545,
+      "skewness": -0.27112699155181136,
+      "kurtosis": 8.165322585359343,
+      "suggested_distribution": "t",
+      "t_df": 4.7,
+      "n_obs": 124,
+      "fallback": false
+    },
+    "Developing_Low": {
+      "ar1_coef": 0.28951483854833077,
+      "mean": -2.3092638912203257e-15,
+      "std": 2.8809722186859297,
+      "skewness": -1.0617897668793177,
+      "kurtosis": 3.3363532385696564,
+      "suggested_distribution": "normal",
+      "t_df": null,
+      "n_obs": 125,
+      "fallback": false
+    },
+    "Developing_Medium": {
+      "ar1_coef": 0.2811535380468618,
+      "mean": -1.234221959843031e-15,
+      "std": 3.4208049694620555,
+      "skewness": -2.0614108606034236,
+      "kurtosis": 12.118924018575305,
+      "suggested_distribution": "t",
+      "t_df": 4.5,
+      "n_obs": 308,
+      "fallback": false
+    },
+    "Developing_High": {
+      "ar1_coef": 0.21770298006781058,
+      "mean": 4.470129866522942e-16,
+      "std": 5.279078930694314,
+      "skewness": -0.2572465275493317,
+      "kurtosis": 30.408481143303234,
+      "suggested_distribution": "t",
+      "t_df": 4.2,
+      "n_obs": 1367,
+      "fallback": false
+    }
+  },
+  "climate_damage_shocks": {
+    "Advanced_Low": {
+      "event_probability": 0.3327,
+      "conditional_mean": 0.2754,
+      "conditional_std": 0.5459,
+      "max_observed": 5.1088,
+      "n_obs": 1100,
+      "fallback": false
+    },
+    "Advanced_Medium": {
+      "event_probability": 0.1429,
+      "conditional_mean": 4.5815,
+      "conditional_std": 14.1215,
+      "max_observed": 90.5672,
+      "n_obs": 350,
+      "fallback": false
+    },
+    "Advanced_High": {
+      "event_probability": 0.0,
+      "conditional_mean": 0,
+      "conditional_std": 0,
+      "max_observed": 0.0,
+      "n_obs": 46,
+      "fallback": false
+    },
+    "Emerging_Market_Low": {
+      "event_probability": 0.2343,
+      "conditional_mean": 0.7003,
+      "conditional_std": 1.9187,
+      "max_observed": 12.8184,
+      "n_obs": 350,
+      "fallback": false
+    },
+    "Emerging_Market_Medium": {
+      "event_probability": 0.3224,
+      "conditional_mean": 3.9858,
+      "conditional_std": 25.9806,
+      "max_observed": 330.7499,
+      "n_obs": 850,
+      "fallback": false
+    },
+    "Emerging_Market_High": {
+      "event_probability": 0.056,
+      "conditional_mean": 16.4419,
+      "conditional_std": 18.1867,
+      "max_observed": 50.1785,
+      "n_obs": 125,
+      "fallback": false
+    },
+    "Developing_Low": {
+      "event_probability": 0.176,
+      "conditional_mean": 2.4984,
+      "conditional_std": 5.5919,
+      "max_observed": 23.7121,
+      "n_obs": 125,
+      "fallback": false
+    },
+    "Developing_Medium": {
+      "event_probability": 0.3052,
+      "conditional_mean": 0.7632,
+      "conditional_std": 1.386,
+      "max_observed": 8.7524,
+      "n_obs": 308,
+      "fallback": false
+    },
+    "Developing_High": {
+      "event_probability": 0.1642,
+      "conditional_mean": 1.5176,
+      "conditional_std": 5.809,
+      "max_observed": 78.2918,
+      "n_obs": 1370,
+      "fallback": false
+    }
+  },
+  "interest_rate_shocks": {
+    "Advanced_Low": {
+      "mean": 0.29878750562142037,
+      "std": 6.256197919536326,
+      "skewness": 1.0829481688727818,
+      "kurtosis": 9.608289748775118,
+      "n_obs": 742,
+      "fallback": false
+    },
+    "Advanced_Medium": {
+      "mean": 0.4307117813276149,
+      "std": 5.847375224785065,
+      "skewness": -1.4842296960515062,
+      "kurtosis": 30.674672172095107,
+      "n_obs": 252,
+      "fallback": false
+    },
+    "Advanced_High": {
+      "mean": 0.33223309664552597,
+      "std": 6.152490236892725,
+      "skewness": 0.5263187167660887,
+      "kurtosis": 13.94150101521993,
+      "n_obs": 994,
+      "fallback": true
+    },
+    "Emerging_Market_Low": {
+      "mean": 1.87810285641855,
+      "std": 8.54330656970991,
+      "skewness": -0.21906012607989084,
+      "kurtosis": 8.068851851007599,
+      "n_obs": 166,
+      "fallback": false
+    },
+    "Emerging_Market_Medium": {
+      "mean": 1.0135603386120997,
+      "std": 9.735185101813014,
+      "skewness": 1.5012864120186342,
+      "kurtosis": 14.667061235827095,
+      "n_obs": 523,
+      "fallback": false
+    },
+    "Emerging_Market_High": {
+      "mean": 0.8485052343006658,
+      "std": 6.799115141412755,
+      "skewness": 4.476068791810201,
+      "kurtosis": 26.986599720235237,
+      "n_obs": 62,
+      "fallback": false
+    },
+    "Developing_Low": {
+      "mean": 1.1727410776285774,
+      "std": 6.068172461569154,
+      "skewness": 1.452775076318056,
+      "kurtosis": 3.1715946609691414,
+      "n_obs": 108,
+      "fallback": false
+    },
+    "Developing_Medium": {
+      "mean": 0.9262764982322325,
+      "std": 6.607600811321204,
+      "skewness": 3.4699506150693504,
+      "kurtosis": 30.141861365053437,
+      "n_obs": 218,
+      "fallback": false
+    },
+    "Developing_High": {
+      "mean": 1.4946529612641928,
+      "std": 13.96035556301426,
+      "skewness": -0.22407362589398483,
+      "kurtosis": 31.86816442477668,
+      "n_obs": 768,
+      "fallback": false
+    }
+  }
+}

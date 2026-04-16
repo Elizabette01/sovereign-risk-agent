@@ -1,0 +1,149 @@
+{
+  "debt_accumulation": {
+    "Advanced_Low": {
+      "beta0": 4.538744734304922,
+      "beta1": 1.0003931891215017,
+      "beta2": -14.402071851672167,
+      "beta3": 8.00908684581867,
+      "beta4": 1.2551995381380696,
+      "r_squared": 0.6146793118224061,
+      "n_obs": 791,
+      "fallback_to_economy_type": false
+    },
+    "Advanced_Medium": {
+      "beta0": 0.08720962951294664,
+      "beta1": 0.06197144182930308,
+      "beta2": -0.5574903002950686,
+      "beta3": -0.03925978069472328,
+      "beta4": 0.032207896549876824,
+      "r_squared": 0.1494925229875983,
+      "n_obs": 268,
+      "fallback_to_economy_type": false
+    },
+    "Advanced_High": {
+      "beta0": -44.8365601983939,
+      "beta1": 0.8684329219713472,
+      "beta2": -0.6656227093206692,
+      "beta3": 6.711908248621771,
+      "beta4": 1.6584069526457494,
+      "r_squared": 0.5382787917431824,
+      "n_obs": 1059,
+      "fallback_to_economy_type": true
+    },
+    "Emerging_Market_Low": {
+      "beta0": -125.00119989809394,
+      "beta1": 1.749040574030172,
+      "beta2": 7.055506557297601,
+      "beta3": -5.567766219473445,
+      "beta4": -3.7411190261300242,
+      "r_squared": 0.8113007269735016,
+      "n_obs": 176,
+      "fallback_to_economy_type": false
+    },
+    "Emerging_Market_Medium": {
+      "beta0": 2084.1040190480667,
+      "beta1": -0.3990923905918613,
+      "beta2": 0.906134179489973,
+      "beta3": -6.003873980673673,
+      "beta4": -19.922862152559077,
+      "r_squared": 0.006465380864498993,
+      "n_obs": 554,
+      "fallback_to_economy_type": false
+    },
+    "Emerging_Market_High": {
+      "beta0": 3.6536145948509122,
+      "beta1": -0.05556395674832525,
+      "beta2": -0.9506276808024583,
+      "beta3": -2.0997492247937073,
+      "beta4": -0.022511690234624772,
+      "r_squared": 0.6795235728685817,
+      "n_obs": 69,
+      "fallback_to_economy_type": false
+    },
+    "Developing_Low": {
+      "beta0": 17.769594534939102,
+      "beta1": 0.23279275941349464,
+      "beta2": -5.7561715860874925,
+      "beta3": -0.27632008758293825,
+      "beta4": -1.1612514265711824,
+      "r_squared": 0.9993551718476102,
+      "n_obs": 114,
+      "fallback_to_economy_type": false
+    },
+    "Developing_Medium": {
+      "beta0": -703.5323690924321,
+      "beta1": 0.7376047669032374,
+      "beta2": 3774.811816191909,
+      "beta3": 13.363756574430406,
+      "beta4": -410.8571796054435,
+      "r_squared": 0.5339212895304779,
+      "n_obs": 232,
+      "fallback_to_economy_type": false
+    },
+    "Developing_High": {
+      "beta0": 0.5957289046340344,
+      "beta1": 0.10811609387467513,
+      "beta2": -3.3124337139005946,
+      "beta3": -0.23320801907827052,
+      "beta4": -0.2302645687692232,
+      "r_squared": 0.7431893808038295,
+      "n_obs": 823,
+      "fallback_to_economy_type": false
+    }
+  },
+  "growth_response": {
+    "Advanced": {
+      "beta0": 2.2957490390339546,
+      "beta1_fiscal_impulse": 3.200812611763692e-05,
+      "beta2_growth_lag1": 0.23124703425858567,
+      "beta3_output_gap": 0.6030948722989548,
+      "r_squared": 0.2521336400297639,
+      "n_obs": 1445,
+      "output_gap_included": true
+    },
+    "Emerging Market": {
+      "beta0": 3.6590181812692544,
+      "beta1_fiscal_impulse": 1.0368498924424209e-06,
+      "beta2_growth_lag1": -0.042721707100947026,
+      "beta3_output_gap": 1.2155997007184953,
+      "r_squared": 0.3608641754486065,
+      "n_obs": 1217,
+      "output_gap_included": true
+    },
+    "Developing": {
+      "beta0": 3.5082023899025385,
+      "beta1_fiscal_impulse": 6.318616960609324e-06,
+      "beta2_growth_lag1": 0.16131491970091247,
+      "beta3_output_gap": 0.8872819510392737,
+      "r_squared": 0.3024168416627986,
+      "n_obs": 1743,
+      "output_gap_included": true
+    }
+  },
+  "climate_fiscal_transmission": {
+    "Advanced": {
+      "beta0": -630.2088937069406,
+      "beta1_climate_damage": 10.917173550961436,
+      "beta2_debt_lag": -0.11138853401510934,
+      "beta3_growth": 74.41062132626953,
+      "r_squared": 0.006788985790492141,
+      "n_obs": 1424
+    },
+    "Emerging Market": {
+      "beta0": -11820.261461299628,
+      "beta1_climate_damage": 59.73532047955794,
+      "beta2_debt_lag": 0.11354020975359896,
+      "beta3_growth": -7.224449741001389,
+      "r_squared": 5.394418520610067e-05,
+      "n_obs": 1238
+    },
+    "Developing": {
+      "beta0": -632.3429291313482,
+      "beta1_climate_damage": -115.13069273011499,
+      "beta2_debt_lag": -0.05080633297161518,
+      "beta3_growth": -13.22082620166807,
+      "r_squared": 0.22723561080620225,
+      "n_obs": 1766
+    }
+  }
+}

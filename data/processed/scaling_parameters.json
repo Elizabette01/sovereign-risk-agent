@@ -1,0 +1,112 @@
+{
+  "interest_rate_source": "real_interest_rate_winsorised",
+  "state_variable_map": {
+    "state_output_growth": "gdp_growth",
+    "state_debt_to_gdp": "debt_to_gdp",
+    "state_primary_balance": "weo_primary_balance",
+    "state_interest_rate": "real_interest_rate_winsorised",
+    "state_climate_shock": "climate_damage_gdp_pct_5yr",
+    "state_adaptation_capital": "ndgain_readiness",
+    "state_risk_premium": "r_minus_g_corrected"
+  },
+  "parameters": {
+    "state_output_growth": {
+      "Advanced": {
+        "median": 2.7975312491321014,
+        "iqr": 3.963197330976226
+      },
+      "Emerging Market": {
+        "median": 3.4900034741102592,
+        "iqr": 5.134719446544489
+      },
+      "Developing": {
+        "median": 4.224833660246452,
+        "iqr": 4.439777934009776
+      }
+    },
+    "state_debt_to_gdp": {
+      "Advanced": {
+        "median": 41.4183525,
+        "iqr": 52.2592145
+      },
+      "Emerging Market": {
+        "median": 40.228735,
+        "iqr": 36.252317000000005
+      },
+      "Developing": {
+        "median": 52.5550205,
+        "iqr": 52.714246249999995
+      }
+    },
+    "state_primary_balance": {
+      "Advanced": {
+        "median": -0.0275,
+        "iqr": 10.533000000000001
+      },
+      "Emerging Market": {
+        "median": -0.0265,
+        "iqr": 11.46075
+      },
+      "Developing": {
+        "median": -2.269,
+        "iqr": 71.439
+      }
+    },
+    "state_interest_rate": {
+      "Advanced": {
+        "median": 2.904107592513088,
+        "iqr": 25.404005491166828
+      },
+      "Emerging Market": {
+        "median": -1.0323284418199243,
+        "iqr": 7.751751021140984
+      },
+      "Developing": {
+        "median": -1.4936453975697752,
+        "iqr": 14.09868067958455
+      }
+    },
+    "state_climate_shock": {
+      "Advanced": {
+        "median": 0.002449902613877233,
+        "iqr": 0.09636316933219279
+      },
+      "Emerging Market": {
+        "median": 0.010217663440085109,
+        "iqr": 0.18449524093241243
+      },
+      "Developing": {
+        "median": 0.0,
+        "iqr": 0.08234626497017654
+      }
+    },
+    "state_adaptation_capital": {
+      "Advanced": {
+        "median": 0.525901131044785,
+        "iqr": 0.17565175198618893
+      },
+      "Emerging Market": {
+        "median": 0.3748465247389515,
+        "iqr": 0.09754056758643076
+      },
+      "Developing": {
+        "median": 0.302367657585027,
+        "iqr": 0.07601014331796546
+      }
+    },
+    "state_risk_premium": {
+      "Advanced": {
+        "median": 1.320796737747027,
+        "iqr": 25.909343084325677
+      },
+      "Emerging Market": {
+        "median": -4.096759396746448,
+        "iqr": 13.258309389588906
+      },
+      "Developing": {
+        "median": -5.053183889143295,
+        "iqr": 16.641111507765732
+      }
+    }
+  }
+}
