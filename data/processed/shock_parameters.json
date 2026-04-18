@@ -1,103 +1,85 @@
 {
   "gdp_growth_shocks": {
     "Advanced_Low": {
-      "ar1_coef": 0.3166607012785333,
-      "mean": 1.1885442125441675e-15,
-      "std": 3.6920033250856847,
-      "skewness": 0.14793121398377515,
-      "kurtosis": 5.705209141632846,
-      "suggested_distribution": "t",
-      "t_df": 5.1,
-      "n_obs": 1100,
-      "fallback": false
+      "n": 1743,
+      "ar1_coef": 0.3753,
+      "shock_std": 3.8298,
+      "skew": -0.0306,
+      "kurtosis": 16.5162,
+      "distribution": "t",
+      "shock_t_df": 1.7269260180693498
     },
     "Advanced_Medium": {
-      "ar1_coef": 0.43698249055130056,
-      "mean": 8.120488408686859e-17,
-      "std": 5.942232608962931,
-      "skewness": 2.689074034765864,
-      "kurtosis": 23.162287552869756,
-      "suggested_distribution": "t",
-      "t_df": 4.3,
-      "n_obs": 350,
-      "fallback": false
+      "n": 558,
+      "ar1_coef": 0.4018,
+      "shock_std": 4.6106,
+      "skew": -0.1613,
+      "kurtosis": 8.9028,
+      "distribution": "t",
+      "shock_t_df": 1.9768832734300044
     },
     "Advanced_High": {
-      "ar1_coef": -0.043632360894925074,
-      "mean": 5.450185757250769e-16,
-      "std": 7.7493733116231045,
-      "skewness": 0.13581782010337462,
-      "kurtosis": 2.1160686365879338,
-      "suggested_distribution": "normal",
-      "t_df": null,
-      "n_obs": 44,
-      "fallback": false
+      "n": 55,
+      "ar1_coef": -0.0182,
+      "shock_std": 7.0468,
+      "skew": 0.1364,
+      "kurtosis": 3.0326,
+      "distribution": "normal",
+      "shock_t_df": null
     },
     "Emerging_Market_Low": {
-      "ar1_coef": 0.3365278031554959,
-      "mean": 2.7203636169100977e-15,
-      "std": 4.926989862232877,
-      "skewness": -1.4063108353839187,
-      "kurtosis": 9.044800609924621,
-      "suggested_distribution": "t",
-      "t_df": 4.7,
-      "n_obs": 350,
-      "fallback": false
+      "n": 536,
+      "ar1_coef": 0.5177,
+      "shock_std": 4.9198,
+      "skew": -0.8068,
+      "kurtosis": 7.4828,
+      "distribution": "t",
+      "shock_t_df": 1.9542975721083622
     },
     "Emerging_Market_Medium": {
-      "ar1_coef": 0.05565201942576295,
-      "mean": 2.6749844169792005e-16,
-      "std": 37.377349653896125,
-      "skewness": 3.37394777442765,
-      "kurtosis": 190.30196891450467,
-      "suggested_distribution": "t",
-      "t_df": 4.1,
-      "n_obs": 850,
-      "fallback": false
+      "n": 1335,
+      "ar1_coef": 0.3535,
+      "shock_std": 7.1629,
+      "skew": -0.5421,
+      "kurtosis": 10.2276,
+      "distribution": "t",
+      "shock_t_df": 1.3445024535478611
     },
     "Emerging_Market_High": {
-      "ar1_coef": -0.178369937963359,
-      "mean": -1.0027820867582059e-16,
-      "std": 6.527852415532545,
-      "skewness": -0.27112699155181136,
-      "kurtosis": 8.165322585359343,
-      "suggested_distribution": "t",
-      "t_df": 4.7,
-      "n_obs": 124,
-      "fallback": false
+      "n": 184,
+      "ar1_coef": -0.0503,
+      "shock_std": 5.5489,
+      "skew": -0.4105,
+      "kurtosis": 8.2111,
+      "distribution": "t",
+      "shock_t_df": 3.562178842071061
     },
     "Developing_Low": {
-      "ar1_coef": 0.28951483854833077,
-      "mean": -2.3092638912203257e-15,
-      "std": 2.8809722186859297,
-      "skewness": -1.0617897668793177,
-      "kurtosis": 3.3363532385696564,
-      "suggested_distribution": "normal",
-      "t_df": null,
-      "n_obs": 125,
-      "fallback": false
+      "n": 194,
+      "ar1_coef": 0.4705,
+      "shock_std": 4.9142,
+      "skew": -2.0363,
+      "kurtosis": 11.8606,
+      "distribution": "t",
+      "shock_t_df": 1.6285399074864442
     },
     "Developing_Medium": {
-      "ar1_coef": 0.2811535380468618,
-      "mean": -1.234221959843031e-15,
-      "std": 3.4208049694620555,
-      "skewness": -2.0614108606034236,
-      "kurtosis": 12.118924018575305,
-      "suggested_distribution": "t",
-      "t_df": 4.5,
-      "n_obs": 308,
-      "fallback": false
+      "n": 487,
+      "ar1_coef": 0.1799,
+      "shock_std": 3.5335,
+      "skew": -0.5257,
+      "kurtosis": 17.6995,
+      "distribution": "t",
+      "shock_t_df": 2.5511532370519685
     },
     "Developing_High": {
-      "ar1_coef": 0.21770298006781058,
-      "mean": 4.470129866522942e-16,
-      "std": 5.279078930694314,
-      "skewness": -0.2572465275493317,
-      "kurtosis": 30.408481143303234,
-      "suggested_distribution": "t",
-      "t_df": 4.2,
-      "n_obs": 1367,
-      "fallback": false
+      "n": 2134,
+      "ar1_coef": 0.2649,
+      "shock_std": 4.9247,
+      "skew": -0.6519,
+      "kurtosis": 12.8444,
+      "distribution": "t",
+      "shock_t_df": 2.1294707869917278
     }
   },
   "climate_damage_shocks": {
@@ -247,5 +229,10 @@
       "n_obs": 768,
       "fallback": false
     }
+  },
+  "_metadata": {
+    "updated_in": "05b_fix_transition_dynamics",
+    "gdp_growth_correction": "winsorised at +-30%, AR(1) re-estimated",
+    "climate_and_ir_shocks": "unchanged from nb05"
   }
 }

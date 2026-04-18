@@ -108,5 +108,39 @@
         "iqr": 16.641111507765732
       }
     }
+  },
+  "output_growth_scaling": {
+    "Advanced": {
+      "median": 2.6297,
+      "iqr": 3.3568
+    },
+    "Developing": {
+      "median": 4.3198,
+      "iqr": 4.0388
+    },
+    "Emerging Market": {
+      "median": 3.3865,
+      "iqr": 4.3038
+    }
+  },
+  "risk_premium_scaling": {
+    "Advanced": {
+      "median": -0.5891,
+      "iqr": 18.0094
+    },
+    "Developing": {
+      "median": -5.0011,
+      "iqr": 12.1459
+    },
+    "Emerging Market": {
+      "median": -3.3754,
+      "iqr": 9.1665
+    }
+  },
+  "_metadata_05b": {
+    "gdp_growth_winsorised_at": "+-30pct",
+    "r_minus_g_recomputed": true,
+    "state_output_growth_corrected": true,
+    "state_risk_premium_corrected": true
   }
 }

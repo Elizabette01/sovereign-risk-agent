@@ -1,0 +1,14 @@
+test,profile,mean_terminal_debt,std_terminal_debt,pct_over_100,pct_over_200,flag,max_deviation_pp,nb05_gap_pp
+smoke_test,Advanced_Low,114.2,73.9,52.0,13.0,OK,,
+smoke_test,Advanced_Medium,53.7,33.8,10.0,0.0,OK,,
+smoke_test,Advanced_High,14.1,9.2,0.0,0.0,OK,,
+smoke_test,Emerging_Market_Low,47.5,29.9,4.0,0.0,OK,,
+smoke_test,Emerging_Market_Medium,67.6,33.2,14.0,0.0,OK,,
+smoke_test,Emerging_Market_High,32.8,21.6,1.0,0.0,OK,,
+smoke_test,Developing_Low,47.7,29.6,5.0,0.0,OK,,
+smoke_test,Developing_Medium,105.6,31.7,53.0,0.0,OK,,
+smoke_test,Developing_High,133.9,34.3,87.0,5.0,OK,,
+historical_replay_USA,Advanced_Low,,,,,OK,37.1,
+historical_replay_BRA,Emerging_Market_Low,,,,,OK,87.9,
+historical_replay_KEN,Developing_High,,,,,OK,67.1,
+greece_revalidation,Advanced_Medium,,,,,OK,16.1,11169.0

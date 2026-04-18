@@ -1,0 +1,554 @@
+{
+  "Advanced_Low": {
+    "profile": "Advanced_Low",
+    "economy_type": "Advanced",
+    "climate_risk_tier": "Low",
+    "n_countries": 44,
+    "n_observations": 1745,
+    "sparse_cell": false,
+    "initial_debt": 45.1478,
+    "initial_growth": 2.4807,
+    "initial_primary_balance": -0.106,
+    "initial_interest_rate": 5.8217,
+    "initial_climate_shock": 0.0145,
+    "initial_adaptation_capital": 0.5762,
+    "initial_risk_premium": 4.8411,
+    "stock_flow_mean": 0.209,
+    "stock_flow_mean_raw": -1.456,
+    "stock_flow_std": 18.24,
+    "growth_ar1_coef": 0.3753,
+    "growth_shock_std": 3.8298,
+    "growth_shock_distribution": "t",
+    "growth_shock_t_df": 1.7269260180693498,
+    "growth_base": 2.4807,
+    "climate_event_probability": 0.3327,
+    "climate_conditional_mean": 0.2754,
+    "climate_conditional_std": 0.5459,
+    "climate_max_damage": 10.0,
+    "climate_fiscal_cost": -1.569,
+    "rate_shock_mean": 0.29878750562142037,
+    "rate_shock_std": 6.256197919536326,
+    "rate_base": 5.8217,
+    "scaling": {
+      "state_output_growth": {
+        "median": 2.6297,
+        "iqr": 3.3568
+      },
+      "state_debt_to_gdp": {
+        "median": 43.6717,
+        "iqr": 63.5435
+      },
+      "state_primary_balance": {
+        "median": -0.043,
+        "iqr": 11.286
+      },
+      "state_interest_rate": {
+        "median": 1.4707,
+        "iqr": 15.8701
+      },
+      "state_climate_shock": {
+        "median": 0.0005,
+        "iqr": 0.0782
+      },
+      "state_adaptation_capital": {
+        "median": 0.5259,
+        "iqr": 0.1757
+      },
+      "state_risk_premium": {
+        "median": -0.5891,
+        "iqr": 18.0094
+      }
+    }
+  },
+  "Advanced_Medium": {
+    "profile": "Advanced_Medium",
+    "economy_type": "Advanced",
+    "climate_risk_tier": "Medium",
+    "n_countries": 14,
+    "n_observations": 559,
+    "sparse_cell": false,
+    "initial_debt": 42.4501,
+    "initial_growth": 3.6329,
+    "initial_primary_balance": -0.097,
+    "initial_interest_rate": -0.3289,
+    "initial_climate_shock": 0.0,
+    "initial_adaptation_capital": 0.4488,
+    "initial_risk_premium": -2.7925,
+    "stock_flow_mean": 1.603,
+    "stock_flow_mean_raw": 2.517,
+    "stock_flow_std": 15.277,
+    "growth_ar1_coef": 0.4018,
+    "growth_shock_std": 4.6106,
+    "growth_shock_distribution": "t",
+    "growth_shock_t_df": 1.9768832734300044,
+    "growth_base": 3.6329,
+    "climate_event_probability": 0.1429,
+    "climate_conditional_mean": 4.5815,
+    "climate_conditional_std": 14.1215,
+    "climate_max_damage": 10.0,
+    "climate_fiscal_cost": -1.569,
+    "rate_shock_mean": 0.4307117813276149,
+    "rate_shock_std": 5.847375224785065,
+    "rate_base": -0.3289,
+    "scaling": {
+      "state_output_growth": {
+        "median": 2.6297,
+        "iqr": 3.3568
+      },
+      "state_debt_to_gdp": {
+        "median": 43.6717,
+        "iqr": 63.5435
+      },
+      "state_primary_balance": {
+        "median": -0.043,
+        "iqr": 11.286
+      },
+      "state_interest_rate": {
+        "median": 1.4707,
+        "iqr": 15.8701
+      },
+      "state_climate_shock": {
+        "median": 0.0005,
+        "iqr": 0.0782
+      },
+      "state_adaptation_capital": {
+        "median": 0.5259,
+        "iqr": 0.1757
+      },
+      "state_risk_premium": {
+        "median": -0.5891,
+        "iqr": 18.0094
+      }
+    }
+  },
+  "Advanced_High": {
+    "profile": "Advanced_High",
+    "economy_type": "Advanced",
+    "climate_risk_tier": "High",
+    "n_countries": 2,
+    "n_observations": 56,
+    "sparse_cell": true,
+    "initial_debt": 0.072,
+    "initial_growth": 1.4012,
+    "initial_primary_balance": null,
+    "initial_interest_rate": null,
+    "initial_climate_shock": 0.0,
+    "initial_adaptation_capital": 0.4627,
+    "initial_risk_premium": null,
+    "stock_flow_mean": 0.0,
+    "stock_flow_mean_raw": 0.0,
+    "stock_flow_std": 2.0,
+    "growth_ar1_coef": -0.0182,
+    "growth_shock_std": 7.0468,
+    "growth_shock_distribution": "normal",
+    "growth_shock_t_df": null,
+    "growth_base": 1.4012,
+    "climate_event_probability": 0.0,
+    "climate_conditional_mean": 0,
+    "climate_conditional_std": 0,
+    "climate_max_damage": 10.0,
+    "climate_fiscal_cost": -1.569,
+    "rate_shock_mean": 0.33223309664552597,
+    "rate_shock_std": 6.152490236892725,
+    "rate_base": null,
+    "scaling": {
+      "state_output_growth": {
+        "median": 2.6297,
+        "iqr": 3.3568
+      },
+      "state_debt_to_gdp": {
+        "median": 43.6717,
+        "iqr": 63.5435
+      },
+      "state_primary_balance": {
+        "median": -0.043,
+        "iqr": 11.286
+      },
+      "state_interest_rate": {
+        "median": 1.4707,
+        "iqr": 15.8701
+      },
+      "state_climate_shock": {
+        "median": 0.0005,
+        "iqr": 0.0782
+      },
+      "state_adaptation_capital": {
+        "median": 0.5259,
+        "iqr": 0.1757
+      },
+      "state_risk_premium": {
+        "median": -0.5891,
+        "iqr": 18.0094
+      }
+    },
+    "reliability_note": "Only 2 countries and 46 observations; parameters borrowed from Advanced_Low"
+  },
+  "Emerging_Market_Low": {
+    "profile": "Emerging_Market_Low",
+    "economy_type": "Emerging Market",
+    "climate_risk_tier": "Low",
+    "n_countries": 14,
+    "n_observations": 538,
+    "sparse_cell": false,
+    "initial_debt": 38.8607,
+    "initial_growth": 3.8921,
+    "initial_primary_balance": -0.334,
+    "initial_interest_rate": 0.3431,
+    "initial_climate_shock": 0.0067,
+    "initial_adaptation_capital": 0.4022,
+    "initial_risk_premium": -1.1861,
+    "stock_flow_mean": 1.399,
+    "stock_flow_mean_raw": 1.111,
+    "stock_flow_std": 19.244,
+    "growth_ar1_coef": 0.5177,
+    "growth_shock_std": 4.9198,
+    "growth_shock_distribution": "t",
+    "growth_shock_t_df": 1.9542975721083622,
+    "growth_base": 3.8921,
+    "climate_event_probability": 0.2343,
+    "climate_conditional_mean": 0.7003,
+    "climate_conditional_std": 1.9187,
+    "climate_max_damage": 10.0,
+    "climate_fiscal_cost": 0.547,
+    "rate_shock_mean": 1.87810285641855,
+    "rate_shock_std": 8.54330656970991,
+    "rate_base": 0.3431,
+    "scaling": {
+      "state_output_growth": {
+        "median": 3.3865,
+        "iqr": 4.3038
+      },
+      "state_debt_to_gdp": {
+        "median": 42.217,
+        "iqr": 44.8842
+      },
+      "state_primary_balance": {
+        "median": -0.025,
+        "iqr": 12.063
+      },
+      "state_interest_rate": {
+        "median": -0.3507,
+        "iqr": 6.3122
+      },
+      "state_climate_shock": {
+        "median": 0.0038,
+        "iqr": 0.157
+      },
+      "state_adaptation_capital": {
+        "median": 0.3748,
+        "iqr": 0.0975
+      },
+      "state_risk_premium": {
+        "median": -3.3754,
+        "iqr": 9.1665
+      }
+    }
+  },
+  "Emerging_Market_Medium": {
+    "profile": "Emerging_Market_Medium",
+    "economy_type": "Emerging Market",
+    "climate_risk_tier": "Medium",
+    "n_countries": 34,
+    "n_observations": 1336,
+    "sparse_cell": false,
+    "initial_debt": 43.3184,
+    "initial_growth": 3.461,
+    "initial_primary_balance": -0.0465,
+    "initial_interest_rate": -0.6787,
+    "initial_climate_shock": 0.0198,
+    "initial_adaptation_capital": 0.3718,
+    "initial_risk_premium": -3.5019,
+    "stock_flow_mean": 3.139,
+    "stock_flow_mean_raw": 5.815,
+    "stock_flow_std": 16.435,
+    "growth_ar1_coef": 0.3535,
+    "growth_shock_std": 7.1629,
+    "growth_shock_distribution": "t",
+    "growth_shock_t_df": 1.3445024535478611,
+    "growth_base": 3.461,
+    "climate_event_probability": 0.3224,
+    "climate_conditional_mean": 3.9858,
+    "climate_conditional_std": 25.9806,
+    "climate_max_damage": 10.0,
+    "climate_fiscal_cost": 0.547,
+    "rate_shock_mean": 1.0135603386120997,
+    "rate_shock_std": 9.735185101813014,
+    "rate_base": -0.6787,
+    "scaling": {
+      "state_output_growth": {
+        "median": 3.3865,
+        "iqr": 4.3038
+      },
+      "state_debt_to_gdp": {
+        "median": 42.217,
+        "iqr": 44.8842
+      },
+      "state_primary_balance": {
+        "median": -0.025,
+        "iqr": 12.063
+      },
+      "state_interest_rate": {
+        "median": -0.3507,
+        "iqr": 6.3122
+      },
+      "state_climate_shock": {
+        "median": 0.0038,
+        "iqr": 0.157
+      },
+      "state_adaptation_capital": {
+        "median": 0.3748,
+        "iqr": 0.0975
+      },
+      "state_risk_premium": {
+        "median": -3.3754,
+        "iqr": 9.1665
+      }
+    }
+  },
+  "Emerging_Market_High": {
+    "profile": "Emerging_Market_High",
+    "economy_type": "Emerging Market",
+    "climate_risk_tier": "High",
+    "n_countries": 5,
+    "n_observations": 185,
+    "sparse_cell": true,
+    "initial_debt": 39.2237,
+    "initial_growth": 2.3729,
+    "initial_primary_balance": 0.001,
+    "initial_interest_rate": -2.2845,
+    "initial_climate_shock": 0.0,
+    "initial_adaptation_capital": 0.4151,
+    "initial_risk_premium": -5.9086,
+    "stock_flow_mean": 1.1,
+    "stock_flow_mean_raw": 2.809,
+    "stock_flow_std": 6.674,
+    "growth_ar1_coef": -0.0503,
+    "growth_shock_std": 5.5489,
+    "growth_shock_distribution": "t",
+    "growth_shock_t_df": 3.562178842071061,
+    "growth_base": 2.3729,
+    "climate_event_probability": 0.056,
+    "climate_conditional_mean": 16.4419,
+    "climate_conditional_std": 18.1867,
+    "climate_max_damage": 10.0,
+    "climate_fiscal_cost": 0.547,
+    "rate_shock_mean": 0.8485052343006658,
+    "rate_shock_std": 6.799115141412755,
+    "rate_base": -2.2845,
+    "scaling": {
+      "state_output_growth": {
+        "median": 3.3865,
+        "iqr": 4.3038
+      },
+      "state_debt_to_gdp": {
+        "median": 42.217,
+        "iqr": 44.8842
+      },
+      "state_primary_balance": {
+        "median": -0.025,
+        "iqr": 12.063
+      },
+      "state_interest_rate": {
+        "median": -0.3507,
+        "iqr": 6.3122
+      },
+      "state_climate_shock": {
+        "median": 0.0038,
+        "iqr": 0.157
+      },
+      "state_adaptation_capital": {
+        "median": 0.3748,
+        "iqr": 0.0975
+      },
+      "state_risk_premium": {
+        "median": -3.3754,
+        "iqr": 9.1665
+      }
+    },
+    "reliability_note": "5 countries and ~125 observations; parameters estimated from available data"
+  },
+  "Developing_Low": {
+    "profile": "Developing_Low",
+    "economy_type": "Developing",
+    "climate_risk_tier": "Low",
+    "n_countries": 5,
+    "n_observations": 195,
+    "sparse_cell": true,
+    "initial_debt": 60.4583,
+    "initial_growth": 5.5071,
+    "initial_primary_balance": -0.954,
+    "initial_interest_rate": -2.1921,
+    "initial_climate_shock": 0.0,
+    "initial_adaptation_capital": 0.3558,
+    "initial_risk_premium": -6.4997,
+    "stock_flow_mean": 2.355,
+    "stock_flow_mean_raw": 3.537,
+    "stock_flow_std": 17.609,
+    "growth_ar1_coef": 0.4705,
+    "growth_shock_std": 4.9142,
+    "growth_shock_distribution": "t",
+    "growth_shock_t_df": 1.6285399074864442,
+    "growth_base": 5.5071,
+    "climate_event_probability": 0.176,
+    "climate_conditional_mean": 2.4984,
+    "climate_conditional_std": 5.5919,
+    "climate_max_damage": 10.0,
+    "climate_fiscal_cost": -0.489,
+    "rate_shock_mean": 1.1727410776285774,
+    "rate_shock_std": 6.068172461569154,
+    "rate_base": -2.1921,
+    "scaling": {
+      "state_output_growth": {
+        "median": 4.3198,
+        "iqr": 4.0388
+      },
+      "state_debt_to_gdp": {
+        "median": 57.1982,
+        "iqr": 76.9871
+      },
+      "state_primary_balance": {
+        "median": -2.661,
+        "iqr": 93.7007
+      },
+      "state_interest_rate": {
+        "median": -1.3058,
+        "iqr": 9.8465
+      },
+      "state_climate_shock": {
+        "median": 0.0,
+        "iqr": 0.0696
+      },
+      "state_adaptation_capital": {
+        "median": 0.3024,
+        "iqr": 0.076
+      },
+      "state_risk_premium": {
+        "median": -5.0011,
+        "iqr": 12.1459
+      }
+    },
+    "reliability_note": "5 countries and ~125 observations; parameters estimated from available data"
+  },
+  "Developing_Medium": {
+    "profile": "Developing_Medium",
+    "economy_type": "Developing",
+    "climate_risk_tier": "Medium",
+    "n_countries": 13,
+    "n_observations": 488,
+    "sparse_cell": false,
+    "initial_debt": 56.7282,
+    "initial_growth": 4.2204,
+    "initial_primary_balance": -2.1105,
+    "initial_interest_rate": -0.5711,
+    "initial_climate_shock": 0.002,
+    "initial_adaptation_capital": 0.3283,
+    "initial_risk_premium": -4.4967,
+    "stock_flow_mean": 3.793,
+    "stock_flow_mean_raw": 7.84,
+    "stock_flow_std": 17.063,
+    "growth_ar1_coef": 0.1799,
+    "growth_shock_std": 3.5335,
+    "growth_shock_distribution": "t",
+    "growth_shock_t_df": 2.5511532370519685,
+    "growth_base": 4.2204,
+    "climate_event_probability": 0.3052,
+    "climate_conditional_mean": 0.7632,
+    "climate_conditional_std": 1.386,
+    "climate_max_damage": 10.0,
+    "climate_fiscal_cost": -0.489,
+    "rate_shock_mean": 0.9262764982322325,
+    "rate_shock_std": 6.607600811321204,
+    "rate_base": -0.5711,
+    "scaling": {
+      "state_output_growth": {
+        "median": 4.3198,
+        "iqr": 4.0388
+      },
+      "state_debt_to_gdp": {
+        "median": 57.1982,
+        "iqr": 76.9871
+      },
+      "state_primary_balance": {
+        "median": -2.661,
+        "iqr": 93.7007
+      },
+      "state_interest_rate": {
+        "median": -1.3058,
+        "iqr": 9.8465
+      },
+      "state_climate_shock": {
+        "median": 0.0,
+        "iqr": 0.0696
+      },
+      "state_adaptation_capital": {
+        "median": 0.3024,
+        "iqr": 0.076
+      },
+      "state_risk_premium": {
+        "median": -5.0011,
+        "iqr": 12.1459
+      }
+    }
+  },
+  "Developing_High": {
+    "profile": "Developing_High",
+    "economy_type": "Developing",
+    "climate_risk_tier": "High",
+    "n_countries": 56,
+    "n_observations": 2139,
+    "sparse_cell": false,
+    "initial_debt": 48.152,
+    "initial_growth": 4.4551,
+    "initial_primary_balance": -6.145,
+    "initial_interest_rate": -1.3117,
+    "initial_climate_shock": 0.0,
+    "initial_adaptation_capital": 0.2899,
+    "initial_risk_premium": -4.94,
+    "stock_flow_mean": 3.26,
+    "stock_flow_mean_raw": 4.444,
+    "stock_flow_std": 21.039,
+    "growth_ar1_coef": 0.2649,
+    "growth_shock_std": 4.9247,
+    "growth_shock_distribution": "t",
+    "growth_shock_t_df": 2.1294707869917278,
+    "growth_base": 4.4551,
+    "climate_event_probability": 0.1642,
+    "climate_conditional_mean": 1.5176,
+    "climate_conditional_std": 5.809,
+    "climate_max_damage": 10.0,
+    "climate_fiscal_cost": -0.489,
+    "rate_shock_mean": 1.4946529612641928,
+    "rate_shock_std": 13.96035556301426,
+    "rate_base": -1.3117,
+    "scaling": {
+      "state_output_growth": {
+        "median": 4.3198,
+        "iqr": 4.0388
+      },
+      "state_debt_to_gdp": {
+        "median": 57.1982,
+        "iqr": 76.9871
+      },
+      "state_primary_balance": {
+        "median": -2.661,
+        "iqr": 93.7007
+      },
+      "state_interest_rate": {
+        "median": -1.3058,
+        "iqr": 9.8465
+      },
+      "state_climate_shock": {
+        "median": 0.0,
+        "iqr": 0.0696
+      },
+      "state_adaptation_capital": {
+        "median": 0.3024,
+        "iqr": 0.076
+      },
+      "state_risk_premium": {
+        "median": -5.0011,
+        "iqr": 12.1459
+      }
+    }
+  }
+}
