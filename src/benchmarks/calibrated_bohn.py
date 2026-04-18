@@ -46,26 +46,41 @@ from .bohn_fiscal_reaction import BohnFiscalReaction
 # Estimated on 2000–2024 non-projection panel, filtered for data quality.
 # ---------------------------------------------------------------------------
 BOHN_COEFFICIENTS: Dict[str, Dict[str, float]] = {
+    # OLS estimated in Notebook 07a on 2000-2024 WEO/World Bank panel.
+    # Sample: non-projection observations, |pb| ≤ 50%, debt_lag1 ∈ [0%, 300%].
+    # HC3 heteroskedasticity-robust standard errors.
     "Advanced": {
-        "alpha": 0.0142,
-        "beta":  0.0040,
-        "gamma": 0.4804,
+        "alpha":     0.0142,
+        "beta":      0.0040,   # β > 0: Bohn sustainability condition MET
+        "gamma":     0.4804,
         "r_squared": 0.0148,
-        "n_obs": 1119,
+        "n_obs":     1119,
+        "se_beta":   0.0088,   # p=0.6454 — positive but not statistically significant
+        "se_gamma":  0.1498,   # p=0.0013 — output gap highly significant
+        "pv_beta":   0.6454,
+        "pv_gamma":  0.0013,
     },
     "Emerging Market": {
-        "alpha": -1.8499,
-        "beta":   0.0132,
-        "gamma":  0.4064,
+        "alpha":    -1.8499,
+        "beta":      0.0132,   # β > 0: Bohn sustainability condition MET
+        "gamma":     0.4064,
         "r_squared": 0.0162,
-        "n_obs": 809,
+        "n_obs":     809,
+        "se_beta":   0.0101,   # p=0.1909 — positive but marginal significance
+        "se_gamma":  0.1220,   # p=0.0009 — output gap highly significant
+        "pv_beta":   0.1909,
+        "pv_gamma":  0.0009,
     },
     "Developing": {
-        "alpha": -2.5346,
-        "beta":  -0.0144,   # NOTE: β < 0 — sustainability condition not met.
-        "gamma":  0.1828,   # Empirically common for developing economies with
-        "r_squared": 0.0037,  # limited fiscal space; see dissertation Section 4.
-        "n_obs": 966,
+        "alpha":    -2.5346,
+        "beta":     -0.0144,   # β < 0: sustainability condition NOT met.
+        "gamma":     0.1828,   # Empirically common for developing economies with
+        "r_squared": 0.0037,   # limited fiscal space (see dissertation Section 4).
+        "n_obs":     966,
+        "se_beta":   0.0077,   # p=0.0615 — marginally significant negative coefficient
+        "se_gamma":  0.1521,   # p=0.2294 — output gap not significant
+        "pv_beta":   0.0615,
+        "pv_gamma":  0.2294,
     },
 }
 

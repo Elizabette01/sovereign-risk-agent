@@ -135,13 +135,7 @@ WB_INDICATORS: dict[str, str] = {
 
 
 # ── 5. DATA QUALITY THRESHOLDS ────────────────────────────────────────────────
-# These thresholds are used in the cleaning pipeline and must be documented
-# in the dissertation methodology chapter when used to exclude data.
 
-# Minimum consecutive years a country must have to be usable for RL training.
-# Rationale: RL episodes need sufficient trajectory length; 20 years gives
-# the agent meaningful sequences while being achievable for most countries
-# from 1990 onward.
 MIN_YEARS_FOR_RL: int = 20
 
 # Maximum allowable missingness (fraction) per variable before a variable
@@ -150,7 +144,7 @@ MAX_MISSINGNESS_FRACTION: float = 0.30
 
 # IQR multiplier for outlier detection (standard = 1.5; 3.0 = extreme outliers only)
 # Using 3.0 to avoid flagging genuine macroeconomic extremes (e.g. Zimbabwe inflation)
-# as errors. Outliers are flagged, not automatically removed.
+# as errors.
 IQR_OUTLIER_MULTIPLIER: float = 3.0
 
 

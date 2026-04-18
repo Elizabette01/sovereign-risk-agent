@@ -1,0 +1,418 @@
+{
+  "calibration_note": "Notebook 07a \u2014 OLS on 2000-2024 WEO/World Bank panel",
+  "seed": 42,
+  "bohn": {
+    "coefficients": {
+      "Advanced": {
+        "alpha": 0.0142,
+        "beta": 0.004,
+        "gamma": 0.4804,
+        "r_squared": 0.0148,
+        "n_obs": 1119
+      },
+      "Emerging Market": {
+        "alpha": -1.8499,
+        "beta": 0.0132,
+        "gamma": 0.4064,
+        "r_squared": 0.0162,
+        "n_obs": 809
+      },
+      "Developing": {
+        "alpha": -2.5346,
+        "beta": -0.0144,
+        "gamma": 0.1828,
+        "r_squared": 0.0037,
+        "n_obs": 966
+      }
+    },
+    "debt_target": 60.0,
+    "methodology": "Pooled OLS by economy type, 2000-2024, non-projection observations"
+  },
+  "sgp": {
+    "deficit_target": -3.0,
+    "debt_target": 60.0,
+    "adjustment_speed": 0.5,
+    "reference": "European Commission (2020) Vade Mecum SGP, IP-129"
+  },
+  "passive_stress": {
+    "stress_multiplier": 2.0,
+    "parameters_stressed": [
+      "climate_event_probability",
+      "climate_conditional_mean"
+    ],
+    "rationale": "NGFS Hot House World: 2x physical risk by mid-century (NGFS 2023)"
+  },
+  "validation_results": {
+    "Advanced_Low": {
+      "bohn": {
+        "mean_terminal_debt": 178.25,
+        "median_terminal_debt": 212.58,
+        "mean_cumulative_reward": -639.5,
+        "pct_crisis": 70.0
+      },
+      "sgp": {
+        "mean_terminal_debt": 188.24,
+        "median_terminal_debt": 212.66,
+        "mean_cumulative_reward": -656.34,
+        "pct_crisis": 77.0
+      },
+      "passive": {
+        "mean_terminal_debt": 193.04,
+        "median_terminal_debt": 215.3,
+        "mean_cumulative_reward": -646.08,
+        "pct_crisis": 79.0
+      },
+      "random": {
+        "mean_terminal_debt": 202.25,
+        "median_terminal_debt": 217.45,
+        "mean_cumulative_reward": -709.61,
+        "pct_crisis": 80.0
+      }
+    },
+    "Advanced_Medium": {
+      "bohn": {
+        "mean_terminal_debt": 170.13,
+        "median_terminal_debt": 207.79,
+        "mean_cumulative_reward": -649.92,
+        "pct_crisis": 65.0
+      },
+      "sgp": {
+        "mean_terminal_debt": 189.51,
+        "median_terminal_debt": 214.64,
+        "mean_cumulative_reward": -691.2,
+        "pct_crisis": 74.0
+      },
+      "passive": {
+        "mean_terminal_debt": 182.07,
+        "median_terminal_debt": 211.35,
+        "mean_cumulative_reward": -646.73,
+        "pct_crisis": 70.0
+      },
+      "random": {
+        "mean_terminal_debt": 189.16,
+        "median_terminal_debt": 215.22,
+        "mean_cumulative_reward": -684.83,
+        "pct_crisis": 76.0
+      }
+    },
+    "Advanced_High": {
+      "bohn": {
+        "mean_terminal_debt": 122.08,
+        "median_terminal_debt": 86.96,
+        "mean_cumulative_reward": -422.73,
+        "pct_crisis": 43.0
+      },
+      "sgp": {
+        "mean_terminal_debt": 160.11,
+        "median_terminal_debt": 208.55,
+        "mean_cumulative_reward": -506.26,
+        "pct_crisis": 59.0
+      },
+      "passive": {
+        "mean_terminal_debt": 90.6,
+        "median_terminal_debt": 18.36,
+        "mean_cumulative_reward": -309.81,
+        "pct_crisis": 33.0
+      },
+      "random": {
+        "mean_terminal_debt": 136.62,
+        "median_terminal_debt": 204.01,
+        "mean_cumulative_reward": -487.16,
+        "pct_crisis": 54.0
+      }
+    },
+    "Emerging_Market_Low": {
+      "bohn": {
+        "mean_terminal_debt": 237.75,
+        "median_terminal_debt": 235.73,
+        "mean_cumulative_reward": -731.14,
+        "pct_crisis": 97.0
+      },
+      "sgp": {
+        "mean_terminal_debt": 240.34,
+        "median_terminal_debt": 231.58,
+        "mean_cumulative_reward": -741.45,
+        "pct_crisis": 98.0
+      },
+      "passive": {
+        "mean_terminal_debt": 241.02,
+        "median_terminal_debt": 238.34,
+        "mean_cumulative_reward": -731.79,
+        "pct_crisis": 96.0
+      },
+      "random": {
+        "mean_terminal_debt": 237.76,
+        "median_terminal_debt": 234.42,
+        "mean_cumulative_reward": -722.43,
+        "pct_crisis": 97.0
+      }
+    },
+    "Emerging_Market_Medium": {
+      "bohn": {
+        "mean_terminal_debt": 207.19,
+        "median_terminal_debt": 218.56,
+        "mean_cumulative_reward": -887.57,
+        "pct_crisis": 83.0
+      },
+      "sgp": {
+        "mean_terminal_debt": 201.53,
+        "median_terminal_debt": 220.95,
+        "mean_cumulative_reward": -876.31,
+        "pct_crisis": 81.0
+      },
+      "passive": {
+        "mean_terminal_debt": 207.79,
+        "median_terminal_debt": 225.08,
+        "mean_cumulative_reward": -882.95,
+        "pct_crisis": 80.0
+      },
+      "random": {
+        "mean_terminal_debt": 212.67,
+        "median_terminal_debt": 221.24,
+        "mean_cumulative_reward": -887.22,
+        "pct_crisis": 85.0
+      }
+    },
+    "Emerging_Market_High": {
+      "bohn": {
+        "mean_terminal_debt": 179.53,
+        "median_terminal_debt": 208.45,
+        "mean_cumulative_reward": -635.37,
+        "pct_crisis": 73.0
+      },
+      "sgp": {
+        "mean_terminal_debt": 186.55,
+        "median_terminal_debt": 218.02,
+        "mean_cumulative_reward": -650.02,
+        "pct_crisis": 75.0
+      },
+      "passive": {
+        "mean_terminal_debt": 164.88,
+        "median_terminal_debt": 206.04,
+        "mean_cumulative_reward": -530.49,
+        "pct_crisis": 63.0
+      },
+      "random": {
+        "mean_terminal_debt": 173.53,
+        "median_terminal_debt": 214.1,
+        "mean_cumulative_reward": -586.84,
+        "pct_crisis": 65.0
+      }
+    },
+    "Developing_Low": {
+      "bohn": {
+        "mean_terminal_debt": 210.43,
+        "median_terminal_debt": 218.54,
+        "mean_cumulative_reward": -781.06,
+        "pct_crisis": 85.0
+      },
+      "sgp": {
+        "mean_terminal_debt": 210.26,
+        "median_terminal_debt": 219.68,
+        "mean_cumulative_reward": -769.79,
+        "pct_crisis": 86.0
+      },
+      "passive": {
+        "mean_terminal_debt": 186.02,
+        "median_terminal_debt": 213.2,
+        "mean_cumulative_reward": -683.68,
+        "pct_crisis": 72.0
+      },
+      "random": {
+        "mean_terminal_debt": 199.46,
+        "median_terminal_debt": 217.1,
+        "mean_cumulative_reward": -729.58,
+        "pct_crisis": 80.0
+      }
+    },
+    "Developing_Medium": {
+      "bohn": {
+        "mean_terminal_debt": 185.97,
+        "median_terminal_debt": 214.62,
+        "mean_cumulative_reward": -563.35,
+        "pct_crisis": 76.0
+      },
+      "sgp": {
+        "mean_terminal_debt": 186.59,
+        "median_terminal_debt": 212.59,
+        "mean_cumulative_reward": -578.65,
+        "pct_crisis": 76.0
+      },
+      "passive": {
+        "mean_terminal_debt": 180.35,
+        "median_terminal_debt": 214.77,
+        "mean_cumulative_reward": -606.5,
+        "pct_crisis": 73.0
+      },
+      "random": {
+        "mean_terminal_debt": 182.22,
+        "median_terminal_debt": 213.1,
+        "mean_cumulative_reward": -593.12,
+        "pct_crisis": 76.0
+      }
+    },
+    "Developing_High": {
+      "bohn": {
+        "mean_terminal_debt": 215.04,
+        "median_terminal_debt": 222.88,
+        "mean_cumulative_reward": -629.63,
+        "pct_crisis": 82.0
+      },
+      "sgp": {
+        "mean_terminal_debt": 212.5,
+        "median_terminal_debt": 221.07,
+        "mean_cumulative_reward": -628.48,
+        "pct_crisis": 83.0
+      },
+      "passive": {
+        "mean_terminal_debt": 214.16,
+        "median_terminal_debt": 227.21,
+        "mean_cumulative_reward": -634.44,
+        "pct_crisis": 80.0
+      },
+      "random": {
+        "mean_terminal_debt": 213.84,
+        "median_terminal_debt": 225.54,
+        "mean_cumulative_reward": -659.78,
+        "pct_crisis": 83.0
+      }
+    }
+  },
+  "stress_test_results": {
+    "Advanced_Low": {
+      "normal": {
+        "mean_terminal_debt": 193.04,
+        "pct_crisis": 79.0,
+        "mean_cumulative_reward": -646.08
+      },
+      "stressed": {
+        "mean_terminal_debt": 202.8,
+        "pct_crisis": 83.0,
+        "mean_cumulative_reward": -718.15,
+        "stress_prob": 0.6654,
+        "stress_mean": 0.5508
+      },
+      "delta_mean_debt": 9.76
+    },
+    "Advanced_Medium": {
+      "normal": {
+        "mean_terminal_debt": 182.07,
+        "pct_crisis": 70.0,
+        "mean_cumulative_reward": -646.73
+      },
+      "stressed": {
+        "mean_terminal_debt": 195.39,
+        "pct_crisis": 77.0,
+        "mean_cumulative_reward": -754.19,
+        "stress_prob": 0.2858,
+        "stress_mean": 9.163
+      },
+      "delta_mean_debt": 13.31
+    },
+    "Advanced_High": {
+      "normal": {
+        "mean_terminal_debt": 90.6,
+        "pct_crisis": 33.0,
+        "mean_cumulative_reward": -309.81
+      },
+      "stressed": {
+        "mean_terminal_debt": 90.6,
+        "pct_crisis": 33.0,
+        "mean_cumulative_reward": -309.81,
+        "stress_prob": 0.0,
+        "stress_mean": 0.0
+      },
+      "delta_mean_debt": 0.0
+    },
+    "Emerging_Market_Low": {
+      "normal": {
+        "mean_terminal_debt": 241.02,
+        "pct_crisis": 96.0,
+        "mean_cumulative_reward": -731.79
+      },
+      "stressed": {
+        "mean_terminal_debt": 230.84,
+        "pct_crisis": 91.0,
+        "mean_cumulative_reward": -728.16,
+        "stress_prob": 0.4686,
+        "stress_mean": 1.4006
+      },
+      "delta_mean_debt": -10.18
+    },
+    "Emerging_Market_Medium": {
+      "normal": {
+        "mean_terminal_debt": 207.79,
+        "pct_crisis": 80.0,
+        "mean_cumulative_reward": -882.95
+      },
+      "stressed": {
+        "mean_terminal_debt": 200.77,
+        "pct_crisis": 77.0,
+        "mean_cumulative_reward": -911.48,
+        "stress_prob": 0.6448,
+        "stress_mean": 7.9716
+      },
+      "delta_mean_debt": -7.02
+    },
+    "Emerging_Market_High": {
+      "normal": {
+        "mean_terminal_debt": 164.88,
+        "pct_crisis": 63.0,
+        "mean_cumulative_reward": -530.49
+      },
+      "stressed": {
+        "mean_terminal_debt": 165.32,
+        "pct_crisis": 63.0,
+        "mean_cumulative_reward": -568.28,
+        "stress_prob": 0.112,
+        "stress_mean": 32.8838
+      },
+      "delta_mean_debt": 0.45
+    },
+    "Developing_Low": {
+      "normal": {
+        "mean_terminal_debt": 186.02,
+        "pct_crisis": 72.0,
+        "mean_cumulative_reward": -683.68
+      },
+      "stressed": {
+        "mean_terminal_debt": 196.98,
+        "pct_crisis": 80.0,
+        "mean_cumulative_reward": -765.99,
+        "stress_prob": 0.352,
+        "stress_mean": 4.9968
+      },
+      "delta_mean_debt": 10.96
+    },
+    "Developing_Medium": {
+      "normal": {
+        "mean_terminal_debt": 180.35,
+        "pct_crisis": 73.0,
+        "mean_cumulative_reward": -606.5
+      },
+      "stressed": {
+        "mean_terminal_debt": 190.45,
+        "pct_crisis": 78.0,
+        "mean_cumulative_reward": -621.67,
+        "stress_prob": 0.6104,
+        "stress_mean": 1.5264
+      },
+      "delta_mean_debt": 10.1
+    },
+    "Developing_High": {
+      "normal": {
+        "mean_terminal_debt": 214.16,
+        "pct_crisis": 80.0,
+        "mean_cumulative_reward": -634.44
+      },
+      "stressed": {
+        "mean_terminal_debt": 198.06,
+        "pct_crisis": 77.0,
+        "mean_cumulative_reward": -632.72,
+        "stress_prob": 0.3284,
+        "stress_mean": 3.0352
+      },
+      "delta_mean_debt": -16.1
+    }
+  }
+}
