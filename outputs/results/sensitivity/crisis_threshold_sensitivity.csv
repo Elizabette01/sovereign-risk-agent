@@ -1,0 +1,19 @@
+Profile,Algorithm,Crisis Threshold,Mean Terminal Debt,Crisis Rate (%),Mean Reward,Action 5 (%):
+Advanced_Low,DQN,150.0,40.4,16.5,-214.4,0.0
+Advanced_Low,DQN,200.0,42.7,13.5,-244.4,0.0
+Advanced_Low,DQN,250.0,51.1,13.5,-327.0,0.0
+Advanced_Low,PPO,150.0,14.3,6.5,-213.1,0.0
+Advanced_Low,PPO,200.0,15.5,5.5,-243.3,0.0
+Advanced_Low,PPO,250.0,21.9,7.0,-273.7,0.0
+Developing_High,DQN,150.0,64.4,35.5,-253.0,7.5
+Developing_High,DQN,200.0,74.2,30.5,-370.5,7.6
+Developing_High,DQN,250.0,89.8,29.0,-515.3,7.8
+Developing_High,PPO,150.0,58.9,32.5,-250.3,0.0
+Developing_High,PPO,200.0,95.0,38.0,-413.7,0.2
+Developing_High,PPO,250.0,86.5,28.5,-498.5,0.1
+Emerging_Market_Medium,DQN,150.0,27.3,12.5,-572.7,28.0
+Emerging_Market_Medium,DQN,200.0,41.0,14.0,-652.3,28.0
+Emerging_Market_Medium,DQN,250.0,46.4,14.0,-705.6,28.1
+Emerging_Market_Medium,PPO,150.0,74.7,39.5,-560.0,0.2
+Emerging_Market_Medium,PPO,200.0,105.3,43.5,-712.1,0.3
+Emerging_Market_Medium,PPO,250.0,120.0,37.5,-954.3,0.3

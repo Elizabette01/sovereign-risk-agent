@@ -1,0 +1,25 @@
+Profile,Algorithm,Reward Config,Mean Terminal Debt,Crisis Rate (%),Mean Reward,Action 5 (%):
+Advanced_Low,DQN,Baseline,42.7,13.5,-244.4,0.0
+Advanced_Low,DQN,Climate-Focused,42.7,13.5,-255.6,0.0
+Advanced_Low,DQN,Debt-Focused,42.7,13.5,-349.8,0.0
+Advanced_Low,DQN,Growth-Focused,42.7,13.5,-171.2,0.0
+Advanced_Low,PPO,Baseline,15.5,5.5,-243.3,0.0
+Advanced_Low,PPO,Climate-Focused,15.5,5.5,-255.0,0.0
+Advanced_Low,PPO,Debt-Focused,15.5,5.5,-299.5,0.0
+Advanced_Low,PPO,Growth-Focused,15.5,5.5,-158.0,0.0
+Developing_High,DQN,Baseline,74.2,30.5,-370.5,7.6
+Developing_High,DQN,Climate-Focused,74.2,30.5,-402.4,7.6
+Developing_High,DQN,Debt-Focused,74.2,30.5,-568.0,7.6
+Developing_High,DQN,Growth-Focused,74.2,30.5,-283.0,7.6
+Developing_High,PPO,Baseline,95.0,38.0,-413.7,0.2
+Developing_High,PPO,Climate-Focused,95.0,38.0,-442.4,0.2
+Developing_High,PPO,Debt-Focused,95.0,38.0,-669.8,0.2
+Developing_High,PPO,Growth-Focused,95.0,38.0,-333.4,0.2
+Emerging_Market_Medium,DQN,Baseline,41.0,14.0,-652.3,28.0
+Emerging_Market_Medium,DQN,Climate-Focused,41.0,14.0,-779.2,28.0
+Emerging_Market_Medium,DQN,Debt-Focused,41.0,14.0,-750.3,28.0
+Emerging_Market_Medium,DQN,Growth-Focused,41.0,14.0,-541.1,28.0
+Emerging_Market_Medium,PPO,Baseline,105.3,43.5,-712.1,0.3
+Emerging_Market_Medium,PPO,Climate-Focused,105.3,43.5,-816.7,0.3
+Emerging_Market_Medium,PPO,Debt-Focused,105.3,43.5,-956.2,0.3
+Emerging_Market_Medium,PPO,Growth-Focused,105.3,43.5,-621.0,0.3

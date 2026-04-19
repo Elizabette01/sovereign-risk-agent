@@ -1,0 +1,1233 @@
+{
+  "scope": {
+    "profiles": [
+      "Advanced_Low",
+      "Emerging_Market_Medium",
+      "Developing_High"
+    ],
+    "algorithms": [
+      "DQN",
+      "PPO"
+    ],
+    "eval_seed": 99,
+    "n_episodes": 200
+  },
+  "climate_stress": {
+    "('Advanced_Low', 0.5, 'DQN')": {
+      "mean_terminal_debt": 26.46,
+      "crisis_rate": 7.5,
+      "mean_cumulative_reward": -175.68,
+      "action_distribution": {
+        "0": 21.34,
+        "1": 12.8,
+        "2": 60.25,
+        "3": 1.37,
+        "4": 4.24,
+        "5": 0.0
+      }
+    },
+    "('Advanced_Low', 0.5, 'PPO')": {
+      "mean_terminal_debt": 13.36,
+      "crisis_rate": 4.0,
+      "mean_cumulative_reward": -209.0,
+      "action_distribution": {
+        "0": 54.13,
+        "1": 15.68,
+        "2": 7.95,
+        "3": 19.74,
+        "4": 2.5,
+        "5": 0.0
+      }
+    },
+    "('Advanced_Low', 1.0, 'DQN')": {
+      "mean_terminal_debt": 42.71,
+      "crisis_rate": 13.5,
+      "mean_cumulative_reward": -244.44,
+      "action_distribution": {
+        "0": 24.87,
+        "1": 11.01,
+        "2": 58.74,
+        "3": 1.41,
+        "4": 3.96,
+        "5": 0.02
+      }
+    },
+    "('Advanced_Low', 1.0, 'PPO')": {
+      "mean_terminal_debt": 15.48,
+      "crisis_rate": 5.5,
+      "mean_cumulative_reward": -243.27,
+      "action_distribution": {
+        "0": 55.01,
+        "1": 19.87,
+        "2": 5.29,
+        "3": 18.02,
+        "4": 1.81,
+        "5": 0.0
+      }
+    },
+    "('Advanced_Low', 1.5, 'DQN')": {
+      "mean_terminal_debt": 49.52,
+      "crisis_rate": 16.5,
+      "mean_cumulative_reward": -280.49,
+      "action_distribution": {
+        "0": 29.86,
+        "1": 8.78,
+        "2": 56.52,
+        "3": 0.96,
+        "4": 3.88,
+        "5": 0.0
+      }
+    },
+    "('Advanced_Low', 1.5, 'PPO')": {
+      "mean_terminal_debt": 21.22,
+      "crisis_rate": 8.5,
+      "mean_cumulative_reward": -253.76,
+      "action_distribution": {
+        "0": 52.71,
+        "1": 25.65,
+        "2": 4.52,
+        "3": 15.04,
+        "4": 2.08,
+        "5": 0.0
+      }
+    },
+    "('Advanced_Low', 2.0, 'DQN')": {
+      "mean_terminal_debt": 51.89,
+      "crisis_rate": 15.5,
+      "mean_cumulative_reward": -293.0,
+      "action_distribution": {
+        "0": 31.47,
+        "1": 7.78,
+        "2": 56.64,
+        "3": 0.85,
+        "4": 3.23,
+        "5": 0.02
+      }
+    },
+    "('Advanced_Low', 2.0, 'PPO')": {
+      "mean_terminal_debt": 17.22,
+      "crisis_rate": 7.0,
+      "mean_cumulative_reward": -250.81,
+      "action_distribution": {
+        "0": 55.7,
+        "1": 29.68,
+        "2": 2.58,
+        "3": 10.4,
+        "4": 1.65,
+        "5": 0.0
+      }
+    },
+    "('Advanced_Low', 3.0, 'DQN')": {
+      "mean_terminal_debt": 73.96,
+      "crisis_rate": 23.5,
+      "mean_cumulative_reward": -370.99,
+      "action_distribution": {
+        "0": 43.24,
+        "1": 3.48,
+        "2": 51.09,
+        "3": 0.34,
+        "4": 1.83,
+        "5": 0.02
+      }
+    },
+    "('Advanced_Low', 3.0, 'PPO')": {
+      "mean_terminal_debt": 32.12,
+      "crisis_rate": 13.5,
+      "mean_cumulative_reward": -307.9,
+      "action_distribution": {
+        "0": 51.87,
+        "1": 43.32,
+        "2": 1.35,
+        "3": 3.11,
+        "4": 0.35,
+        "5": 0.0
+      }
+    },
+    "('Emerging_Market_Medium', 0.5, 'DQN')": {
+      "mean_terminal_debt": 50.03,
+      "crisis_rate": 18.5,
+      "mean_cumulative_reward": -616.47,
+      "action_distribution": {
+        "0": 35.82,
+        "1": 40.71,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 23.47
+      }
+    },
+    "('Emerging_Market_Medium', 0.5, 'PPO')": {
+      "mean_terminal_debt": 97.49,
+      "crisis_rate": 37.5,
+      "mean_cumulative_reward": -688.55,
+      "action_distribution": {
+        "0": 43.29,
+        "1": 34.85,
+        "2": 2.74,
+        "3": 19.06,
+        "4": 0.0,
+        "5": 0.06
+      }
+    },
+    "('Emerging_Market_Medium', 1.0, 'DQN')": {
+      "mean_terminal_debt": 40.99,
+      "crisis_rate": 14.0,
+      "mean_cumulative_reward": -652.28,
+      "action_distribution": {
+        "0": 33.03,
+        "1": 38.96,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 28.01
+      }
+    },
+    "('Emerging_Market_Medium', 1.0, 'PPO')": {
+      "mean_terminal_debt": 105.32,
+      "crisis_rate": 43.5,
+      "mean_cumulative_reward": -712.08,
+      "action_distribution": {
+        "0": 38.75,
+        "1": 39.62,
+        "2": 2.89,
+        "3": 18.43,
+        "4": 0.0,
+        "5": 0.3
+      }
+    },
+    "('Emerging_Market_Medium', 1.5, 'DQN')": {
+      "mean_terminal_debt": 32.02,
+      "crisis_rate": 11.5,
+      "mean_cumulative_reward": -697.23,
+      "action_distribution": {
+        "0": 36.51,
+        "1": 34.76,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 28.73
+      }
+    },
+    "('Emerging_Market_Medium', 1.5, 'PPO')": {
+      "mean_terminal_debt": 99.34,
+      "crisis_rate": 38.0,
+      "mean_cumulative_reward": -788.96,
+      "action_distribution": {
+        "0": 37.14,
+        "1": 44.97,
+        "2": 1.76,
+        "3": 15.78,
+        "4": 0.0,
+        "5": 0.35
+      }
+    },
+    "('Emerging_Market_Medium', 2.0, 'DQN')": {
+      "mean_terminal_debt": 42.99,
+      "crisis_rate": 16.5,
+      "mean_cumulative_reward": -753.62,
+      "action_distribution": {
+        "0": 36.42,
+        "1": 32.99,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 30.6
+      }
+    },
+    "('Emerging_Market_Medium', 2.0, 'PPO')": {
+      "mean_terminal_debt": 107.65,
+      "crisis_rate": 41.5,
+      "mean_cumulative_reward": -871.43,
+      "action_distribution": {
+        "0": 35.14,
+        "1": 49.94,
+        "2": 1.7,
+        "3": 12.97,
+        "4": 0.0,
+        "5": 0.24
+      }
+    },
+    "('Emerging_Market_Medium', 3.0, 'DQN')": {
+      "mean_terminal_debt": 42.54,
+      "crisis_rate": 15.0,
+      "mean_cumulative_reward": -867.61,
+      "action_distribution": {
+        "0": 41.12,
+        "1": 26.7,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 32.18
+      }
+    },
+    "('Emerging_Market_Medium', 3.0, 'PPO')": {
+      "mean_terminal_debt": 76.02,
+      "crisis_rate": 30.0,
+      "mean_cumulative_reward": -895.4,
+      "action_distribution": {
+        "0": 25.65,
+        "1": 64.45,
+        "2": 0.65,
+        "3": 8.74,
+        "4": 0.0,
+        "5": 0.52
+      }
+    },
+    "('Developing_High', 0.5, 'DQN')": {
+      "mean_terminal_debt": 77.41,
+      "crisis_rate": 31.0,
+      "mean_cumulative_reward": -382.33,
+      "action_distribution": {
+        "0": 86.86,
+        "1": 2.08,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 11.06
+      }
+    },
+    "('Developing_High', 0.5, 'PPO')": {
+      "mean_terminal_debt": 86.75,
+      "crisis_rate": 36.0,
+      "mean_cumulative_reward": -396.08,
+      "action_distribution": {
+        "0": 70.63,
+        "1": 29.23,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 0.14
+      }
+    },
+    "('Developing_High', 1.0, 'DQN')": {
+      "mean_terminal_debt": 74.16,
+      "crisis_rate": 30.5,
+      "mean_cumulative_reward": -370.46,
+      "action_distribution": {
+        "0": 91.34,
+        "1": 1.07,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 7.59
+      }
+    },
+    "('Developing_High', 1.0, 'PPO')": {
+      "mean_terminal_debt": 95.04,
+      "crisis_rate": 38.0,
+      "mean_cumulative_reward": -413.7,
+      "action_distribution": {
+        "0": 70.97,
+        "1": 28.86,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 0.16
+      }
+    },
+    "('Developing_High', 1.5, 'DQN')": {
+      "mean_terminal_debt": 78.56,
+      "crisis_rate": 32.5,
+      "mean_cumulative_reward": -398.33,
+      "action_distribution": {
+        "0": 91.4,
+        "1": 0.77,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 7.83
+      }
+    },
+    "('Developing_High', 1.5, 'PPO')": {
+      "mean_terminal_debt": 80.6,
+      "crisis_rate": 33.5,
+      "mean_cumulative_reward": -390.64,
+      "action_distribution": {
+        "0": 72.07,
+        "1": 27.9,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 0.02
+      }
+    },
+    "('Developing_High', 2.0, 'DQN')": {
+      "mean_terminal_debt": 64.04,
+      "crisis_rate": 26.5,
+      "mean_cumulative_reward": -407.49,
+      "action_distribution": {
+        "0": 90.54,
+        "1": 0.35,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 9.11
+      }
+    },
+    "('Developing_High', 2.0, 'PPO')": {
+      "mean_terminal_debt": 82.67,
+      "crisis_rate": 33.5,
+      "mean_cumulative_reward": -438.78,
+      "action_distribution": {
+        "0": 73.52,
+        "1": 26.39,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 0.09
+      }
+    },
+    "('Developing_High', 3.0, 'DQN')": {
+      "mean_terminal_debt": 79.57,
+      "crisis_rate": 32.5,
+      "mean_cumulative_reward": -460.48,
+      "action_distribution": {
+        "0": 92.78,
+        "1": 0.11,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 7.11
+      }
+    },
+    "('Developing_High', 3.0, 'PPO')": {
+      "mean_terminal_debt": 83.54,
+      "crisis_rate": 34.5,
+      "mean_cumulative_reward": -467.16,
+      "action_distribution": {
+        "0": 80.1,
+        "1": 19.86,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 0.04
+      }
+    }
+  },
+  "crisis_threshold": {
+    "('Advanced_Low', 150.0, 'DQN')": {
+      "mean_terminal_debt": 40.35,
+      "crisis_rate": 16.5,
+      "mean_cumulative_reward": -214.42,
+      "action_distribution": {
+        "0": 26.23,
+        "1": 10.9,
+        "2": 57.1,
+        "3": 1.62,
+        "4": 4.14,
+        "5": 0.02
+      }
+    },
+    "('Advanced_Low', 150.0, 'PPO')": {
+      "mean_terminal_debt": 14.34,
+      "crisis_rate": 6.5,
+      "mean_cumulative_reward": -213.08,
+      "action_distribution": {
+        "0": 55.64,
+        "1": 19.27,
+        "2": 4.46,
+        "3": 19.01,
+        "4": 1.63,
+        "5": 0.0
+      }
+    },
+    "('Advanced_Low', 200.0, 'DQN')": {
+      "mean_terminal_debt": 42.71,
+      "crisis_rate": 13.5,
+      "mean_cumulative_reward": -244.44,
+      "action_distribution": {
+        "0": 24.87,
+        "1": 11.01,
+        "2": 58.74,
+        "3": 1.41,
+        "4": 3.96,
+        "5": 0.02
+      }
+    },
+    "('Advanced_Low', 200.0, 'PPO')": {
+      "mean_terminal_debt": 15.48,
+      "crisis_rate": 5.5,
+      "mean_cumulative_reward": -243.27,
+      "action_distribution": {
+        "0": 55.01,
+        "1": 19.87,
+        "2": 5.29,
+        "3": 18.02,
+        "4": 1.81,
+        "5": 0.0
+      }
+    },
+    "('Advanced_Low', 250.0, 'DQN')": {
+      "mean_terminal_debt": 51.1,
+      "crisis_rate": 13.5,
+      "mean_cumulative_reward": -326.97,
+      "action_distribution": {
+        "0": 26.09,
+        "1": 10.57,
+        "2": 58.32,
+        "3": 1.23,
+        "4": 3.77,
+        "5": 0.02
+      }
+    },
+    "('Advanced_Low', 250.0, 'PPO')": {
+      "mean_terminal_debt": 21.94,
+      "crisis_rate": 7.0,
+      "mean_cumulative_reward": -273.69,
+      "action_distribution": {
+        "0": 55.78,
+        "1": 19.83,
+        "2": 4.7,
+        "3": 18.05,
+        "4": 1.64,
+        "5": 0.0
+      }
+    },
+    "('Emerging_Market_Medium', 150.0, 'DQN')": {
+      "mean_terminal_debt": 27.26,
+      "crisis_rate": 12.5,
+      "mean_cumulative_reward": -572.74,
+      "action_distribution": {
+        "0": 33.2,
+        "1": 38.8,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 28.0
+      }
+    },
+    "('Emerging_Market_Medium', 150.0, 'PPO')": {
+      "mean_terminal_debt": 74.69,
+      "crisis_rate": 39.5,
+      "mean_cumulative_reward": -559.98,
+      "action_distribution": {
+        "0": 40.7,
+        "1": 40.41,
+        "2": 1.54,
+        "3": 17.19,
+        "4": 0.0,
+        "5": 0.16
+      }
+    },
+    "('Emerging_Market_Medium', 200.0, 'DQN')": {
+      "mean_terminal_debt": 40.99,
+      "crisis_rate": 14.0,
+      "mean_cumulative_reward": -652.28,
+      "action_distribution": {
+        "0": 33.03,
+        "1": 38.96,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 28.01
+      }
+    },
+    "('Emerging_Market_Medium', 200.0, 'PPO')": {
+      "mean_terminal_debt": 105.32,
+      "crisis_rate": 43.5,
+      "mean_cumulative_reward": -712.08,
+      "action_distribution": {
+        "0": 38.75,
+        "1": 39.62,
+        "2": 2.89,
+        "3": 18.43,
+        "4": 0.0,
+        "5": 0.3
+      }
+    },
+    "('Emerging_Market_Medium', 250.0, 'DQN')": {
+      "mean_terminal_debt": 46.38,
+      "crisis_rate": 14.0,
+      "mean_cumulative_reward": -705.58,
+      "action_distribution": {
+        "0": 35.0,
+        "1": 36.87,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 28.12
+      }
+    },
+    "('Emerging_Market_Medium', 250.0, 'PPO')": {
+      "mean_terminal_debt": 120.01,
+      "crisis_rate": 37.5,
+      "mean_cumulative_reward": -954.33,
+      "action_distribution": {
+        "0": 39.3,
+        "1": 39.56,
+        "2": 3.48,
+        "3": 17.34,
+        "4": 0.0,
+        "5": 0.32
+      }
+    },
+    "('Developing_High', 150.0, 'DQN')": {
+      "mean_terminal_debt": 64.42,
+      "crisis_rate": 35.5,
+      "mean_cumulative_reward": -252.98,
+      "action_distribution": {
+        "0": 91.0,
+        "1": 1.52,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 7.48
+      }
+    },
+    "('Developing_High', 150.0, 'PPO')": {
+      "mean_terminal_debt": 58.93,
+      "crisis_rate": 32.5,
+      "mean_cumulative_reward": -250.32,
+      "action_distribution": {
+        "0": 73.2,
+        "1": 26.73,
+        "2": 0.02,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 0.04
+      }
+    },
+    "('Developing_High', 200.0, 'DQN')": {
+      "mean_terminal_debt": 74.16,
+      "crisis_rate": 30.5,
+      "mean_cumulative_reward": -370.46,
+      "action_distribution": {
+        "0": 91.34,
+        "1": 1.07,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 7.59
+      }
+    },
+    "('Developing_High', 200.0, 'PPO')": {
+      "mean_terminal_debt": 95.04,
+      "crisis_rate": 38.0,
+      "mean_cumulative_reward": -413.7,
+      "action_distribution": {
+        "0": 70.97,
+        "1": 28.86,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 0.16
+      }
+    },
+    "('Developing_High', 250.0, 'DQN')": {
+      "mean_terminal_debt": 89.84,
+      "crisis_rate": 29.0,
+      "mean_cumulative_reward": -515.34,
+      "action_distribution": {
+        "0": 90.83,
+        "1": 1.33,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 7.84
+      }
+    },
+    "('Developing_High', 250.0, 'PPO')": {
+      "mean_terminal_debt": 86.53,
+      "crisis_rate": 28.5,
+      "mean_cumulative_reward": -498.47,
+      "action_distribution": {
+        "0": 70.79,
+        "1": 29.06,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 0.15
+      }
+    }
+  },
+  "reward_weights": {
+    "('Advanced_Low', 'Baseline', 'DQN')": {
+      "mean_terminal_debt": 42.71,
+      "crisis_rate": 13.5,
+      "mean_cumulative_reward": -244.44,
+      "action_distribution": {
+        "0": 24.87,
+        "1": 11.01,
+        "2": 58.74,
+        "3": 1.41,
+        "4": 3.96,
+        "5": 0.02
+      }
+    },
+    "('Advanced_Low', 'Baseline', 'PPO')": {
+      "mean_terminal_debt": 15.48,
+      "crisis_rate": 5.5,
+      "mean_cumulative_reward": -243.27,
+      "action_distribution": {
+        "0": 55.01,
+        "1": 19.87,
+        "2": 5.29,
+        "3": 18.02,
+        "4": 1.81,
+        "5": 0.0
+      }
+    },
+    "('Advanced_Low', 'Debt-Focused', 'DQN')": {
+      "mean_terminal_debt": 42.71,
+      "crisis_rate": 13.5,
+      "mean_cumulative_reward": -349.79,
+      "action_distribution": {
+        "0": 24.87,
+        "1": 11.01,
+        "2": 58.74,
+        "3": 1.41,
+        "4": 3.96,
+        "5": 0.02
+      }
+    },
+    "('Advanced_Low', 'Debt-Focused', 'PPO')": {
+      "mean_terminal_debt": 15.48,
+      "crisis_rate": 5.5,
+      "mean_cumulative_reward": -299.51,
+      "action_distribution": {
+        "0": 55.01,
+        "1": 19.87,
+        "2": 5.29,
+        "3": 18.02,
+        "4": 1.81,
+        "5": 0.0
+      }
+    },
+    "('Advanced_Low', 'Climate-Focused', 'DQN')": {
+      "mean_terminal_debt": 42.71,
+      "crisis_rate": 13.5,
+      "mean_cumulative_reward": -255.58,
+      "action_distribution": {
+        "0": 24.87,
+        "1": 11.01,
+        "2": 58.74,
+        "3": 1.41,
+        "4": 3.96,
+        "5": 0.02
+      }
+    },
+    "('Advanced_Low', 'Climate-Focused', 'PPO')": {
+      "mean_terminal_debt": 15.48,
+      "crisis_rate": 5.5,
+      "mean_cumulative_reward": -255.05,
+      "action_distribution": {
+        "0": 55.01,
+        "1": 19.87,
+        "2": 5.29,
+        "3": 18.02,
+        "4": 1.81,
+        "5": 0.0
+      }
+    },
+    "('Advanced_Low', 'Growth-Focused', 'DQN')": {
+      "mean_terminal_debt": 42.71,
+      "crisis_rate": 13.5,
+      "mean_cumulative_reward": -171.21,
+      "action_distribution": {
+        "0": 24.87,
+        "1": 11.01,
+        "2": 58.74,
+        "3": 1.41,
+        "4": 3.96,
+        "5": 0.02
+      }
+    },
+    "('Advanced_Low', 'Growth-Focused', 'PPO')": {
+      "mean_terminal_debt": 15.48,
+      "crisis_rate": 5.5,
+      "mean_cumulative_reward": -157.99,
+      "action_distribution": {
+        "0": 55.01,
+        "1": 19.87,
+        "2": 5.29,
+        "3": 18.02,
+        "4": 1.81,
+        "5": 0.0
+      }
+    },
+    "('Emerging_Market_Medium', 'Baseline', 'DQN')": {
+      "mean_terminal_debt": 40.99,
+      "crisis_rate": 14.0,
+      "mean_cumulative_reward": -652.28,
+      "action_distribution": {
+        "0": 33.03,
+        "1": 38.96,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 28.01
+      }
+    },
+    "('Emerging_Market_Medium', 'Baseline', 'PPO')": {
+      "mean_terminal_debt": 105.32,
+      "crisis_rate": 43.5,
+      "mean_cumulative_reward": -712.08,
+      "action_distribution": {
+        "0": 38.75,
+        "1": 39.62,
+        "2": 2.89,
+        "3": 18.43,
+        "4": 0.0,
+        "5": 0.3
+      }
+    },
+    "('Emerging_Market_Medium', 'Debt-Focused', 'DQN')": {
+      "mean_terminal_debt": 40.99,
+      "crisis_rate": 14.0,
+      "mean_cumulative_reward": -750.33,
+      "action_distribution": {
+        "0": 33.03,
+        "1": 38.96,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 28.01
+      }
+    },
+    "('Emerging_Market_Medium', 'Debt-Focused', 'PPO')": {
+      "mean_terminal_debt": 105.32,
+      "crisis_rate": 43.5,
+      "mean_cumulative_reward": -956.24,
+      "action_distribution": {
+        "0": 38.75,
+        "1": 39.62,
+        "2": 2.89,
+        "3": 18.43,
+        "4": 0.0,
+        "5": 0.3
+      }
+    },
+    "('Emerging_Market_Medium', 'Climate-Focused', 'DQN')": {
+      "mean_terminal_debt": 40.99,
+      "crisis_rate": 14.0,
+      "mean_cumulative_reward": -779.17,
+      "action_distribution": {
+        "0": 33.03,
+        "1": 38.96,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 28.01
+      }
+    },
+    "('Emerging_Market_Medium', 'Climate-Focused', 'PPO')": {
+      "mean_terminal_debt": 105.32,
+      "crisis_rate": 43.5,
+      "mean_cumulative_reward": -816.74,
+      "action_distribution": {
+        "0": 38.75,
+        "1": 39.62,
+        "2": 2.89,
+        "3": 18.43,
+        "4": 0.0,
+        "5": 0.3
+      }
+    },
+    "('Emerging_Market_Medium', 'Growth-Focused', 'DQN')": {
+      "mean_terminal_debt": 40.99,
+      "crisis_rate": 14.0,
+      "mean_cumulative_reward": -541.1,
+      "action_distribution": {
+        "0": 33.03,
+        "1": 38.96,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 28.01
+      }
+    },
+    "('Emerging_Market_Medium', 'Growth-Focused', 'PPO')": {
+      "mean_terminal_debt": 105.32,
+      "crisis_rate": 43.5,
+      "mean_cumulative_reward": -620.96,
+      "action_distribution": {
+        "0": 38.75,
+        "1": 39.62,
+        "2": 2.89,
+        "3": 18.43,
+        "4": 0.0,
+        "5": 0.3
+      }
+    },
+    "('Developing_High', 'Baseline', 'DQN')": {
+      "mean_terminal_debt": 74.16,
+      "crisis_rate": 30.5,
+      "mean_cumulative_reward": -370.46,
+      "action_distribution": {
+        "0": 91.34,
+        "1": 1.07,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 7.59
+      }
+    },
+    "('Developing_High', 'Baseline', 'PPO')": {
+      "mean_terminal_debt": 95.04,
+      "crisis_rate": 38.0,
+      "mean_cumulative_reward": -413.7,
+      "action_distribution": {
+        "0": 70.97,
+        "1": 28.86,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 0.16
+      }
+    },
+    "('Developing_High', 'Debt-Focused', 'DQN')": {
+      "mean_terminal_debt": 74.16,
+      "crisis_rate": 30.5,
+      "mean_cumulative_reward": -567.96,
+      "action_distribution": {
+        "0": 91.34,
+        "1": 1.07,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 7.59
+      }
+    },
+    "('Developing_High', 'Debt-Focused', 'PPO')": {
+      "mean_terminal_debt": 95.04,
+      "crisis_rate": 38.0,
+      "mean_cumulative_reward": -669.84,
+      "action_distribution": {
+        "0": 70.97,
+        "1": 28.86,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 0.16
+      }
+    },
+    "('Developing_High', 'Climate-Focused', 'DQN')": {
+      "mean_terminal_debt": 74.16,
+      "crisis_rate": 30.5,
+      "mean_cumulative_reward": -402.38,
+      "action_distribution": {
+        "0": 91.34,
+        "1": 1.07,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 7.59
+      }
+    },
+    "('Developing_High', 'Climate-Focused', 'PPO')": {
+      "mean_terminal_debt": 95.04,
+      "crisis_rate": 38.0,
+      "mean_cumulative_reward": -442.43,
+      "action_distribution": {
+        "0": 70.97,
+        "1": 28.86,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 0.16
+      }
+    },
+    "('Developing_High', 'Growth-Focused', 'DQN')": {
+      "mean_terminal_debt": 74.16,
+      "crisis_rate": 30.5,
+      "mean_cumulative_reward": -283.03,
+      "action_distribution": {
+        "0": 91.34,
+        "1": 1.07,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 7.59
+      }
+    },
+    "('Developing_High', 'Growth-Focused', 'PPO')": {
+      "mean_terminal_debt": 95.04,
+      "crisis_rate": 38.0,
+      "mean_cumulative_reward": -333.44,
+      "action_distribution": {
+        "0": 70.97,
+        "1": 28.86,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 0.16
+      }
+    }
+  },
+  "episode_length": {
+    "('Advanced_Low', 20, 'DQN')": {
+      "mean_terminal_debt": 40.67,
+      "crisis_rate": 11.5,
+      "mean_cumulative_reward": -202.94,
+      "action_distribution": {
+        "0": 31.36,
+        "1": 6.45,
+        "2": 58.59,
+        "3": 0.84,
+        "4": 2.76,
+        "5": 0.0
+      }
+    },
+    "('Advanced_Low', 20, 'PPO')": {
+      "mean_terminal_debt": 18.25,
+      "crisis_rate": 7.0,
+      "mean_cumulative_reward": -188.18,
+      "action_distribution": {
+        "0": 61.5,
+        "1": 18.62,
+        "2": 5.96,
+        "3": 12.83,
+        "4": 1.09,
+        "5": 0.0
+      }
+    },
+    "('Advanced_Low', 30, 'DQN')": {
+      "mean_terminal_debt": 42.71,
+      "crisis_rate": 13.5,
+      "mean_cumulative_reward": -244.44,
+      "action_distribution": {
+        "0": 24.87,
+        "1": 11.01,
+        "2": 58.74,
+        "3": 1.41,
+        "4": 3.96,
+        "5": 0.02
+      }
+    },
+    "('Advanced_Low', 30, 'PPO')": {
+      "mean_terminal_debt": 15.48,
+      "crisis_rate": 5.5,
+      "mean_cumulative_reward": -243.27,
+      "action_distribution": {
+        "0": 55.01,
+        "1": 19.87,
+        "2": 5.29,
+        "3": 18.02,
+        "4": 1.81,
+        "5": 0.0
+      }
+    },
+    "('Advanced_Low', 50, 'DQN')": {
+      "mean_terminal_debt": 49.0,
+      "crisis_rate": 16.5,
+      "mean_cumulative_reward": -394.83,
+      "action_distribution": {
+        "0": 20.96,
+        "1": 15.41,
+        "2": 56.6,
+        "3": 1.93,
+        "4": 5.07,
+        "5": 0.03
+      }
+    },
+    "('Advanced_Low', 50, 'PPO')": {
+      "mean_terminal_debt": 16.53,
+      "crisis_rate": 5.0,
+      "mean_cumulative_reward": -378.21,
+      "action_distribution": {
+        "0": 47.52,
+        "1": 21.27,
+        "2": 5.24,
+        "3": 22.86,
+        "4": 3.11,
+        "5": 0.0
+      }
+    },
+    "('Emerging_Market_Medium', 20, 'DQN')": {
+      "mean_terminal_debt": 41.21,
+      "crisis_rate": 14.0,
+      "mean_cumulative_reward": -460.83,
+      "action_distribution": {
+        "0": 42.45,
+        "1": 32.92,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 24.63
+      }
+    },
+    "('Emerging_Market_Medium', 20, 'PPO')": {
+      "mean_terminal_debt": 98.68,
+      "crisis_rate": 39.0,
+      "mean_cumulative_reward": -584.15,
+      "action_distribution": {
+        "0": 39.14,
+        "1": 40.16,
+        "2": 3.78,
+        "3": 16.67,
+        "4": 0.0,
+        "5": 0.25
+      }
+    },
+    "('Emerging_Market_Medium', 30, 'DQN')": {
+      "mean_terminal_debt": 40.99,
+      "crisis_rate": 14.0,
+      "mean_cumulative_reward": -652.28,
+      "action_distribution": {
+        "0": 33.03,
+        "1": 38.96,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 28.01
+      }
+    },
+    "('Emerging_Market_Medium', 30, 'PPO')": {
+      "mean_terminal_debt": 105.32,
+      "crisis_rate": 43.5,
+      "mean_cumulative_reward": -712.08,
+      "action_distribution": {
+        "0": 38.75,
+        "1": 39.62,
+        "2": 2.89,
+        "3": 18.43,
+        "4": 0.0,
+        "5": 0.3
+      }
+    },
+    "('Emerging_Market_Medium', 50, 'DQN')": {
+      "mean_terminal_debt": 43.93,
+      "crisis_rate": 16.5,
+      "mean_cumulative_reward": -986.1,
+      "action_distribution": {
+        "0": 26.64,
+        "1": 42.27,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 31.09
+      }
+    },
+    "('Emerging_Market_Medium', 50, 'PPO')": {
+      "mean_terminal_debt": 113.97,
+      "crisis_rate": 46.5,
+      "mean_cumulative_reward": -1002.88,
+      "action_distribution": {
+        "0": 38.38,
+        "1": 41.44,
+        "2": 2.2,
+        "3": 17.87,
+        "4": 0.0,
+        "5": 0.1
+      }
+    },
+    "('Developing_High', 20, 'DQN')": {
+      "mean_terminal_debt": 53.86,
+      "crisis_rate": 22.5,
+      "mean_cumulative_reward": -276.92,
+      "action_distribution": {
+        "0": 93.57,
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 6.43
+      }
+    },
+    "('Developing_High', 20, 'PPO')": {
+      "mean_terminal_debt": 88.36,
+      "crisis_rate": 36.5,
+      "mean_cumulative_reward": -338.54,
+      "action_distribution": {
+        "0": 69.63,
+        "1": 30.24,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 0.13
+      }
+    },
+    "('Developing_High', 30, 'DQN')": {
+      "mean_terminal_debt": 74.16,
+      "crisis_rate": 30.5,
+      "mean_cumulative_reward": -370.46,
+      "action_distribution": {
+        "0": 91.34,
+        "1": 1.07,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 7.59
+      }
+    },
+    "('Developing_High', 30, 'PPO')": {
+      "mean_terminal_debt": 95.04,
+      "crisis_rate": 38.0,
+      "mean_cumulative_reward": -413.7,
+      "action_distribution": {
+        "0": 70.97,
+        "1": 28.86,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 0.16
+      }
+    },
+    "('Developing_High', 50, 'DQN')": {
+      "mean_terminal_debt": 81.61,
+      "crisis_rate": 33.0,
+      "mean_cumulative_reward": -473.69,
+      "action_distribution": {
+        "0": 76.0,
+        "1": 12.64,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 11.35
+      }
+    },
+    "('Developing_High', 50, 'PPO')": {
+      "mean_terminal_debt": 82.95,
+      "crisis_rate": 33.0,
+      "mean_cumulative_reward": -487.08,
+      "action_distribution": {
+        "0": 73.36,
+        "1": 26.51,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 0.13
+      }
+    }
+  },
+  "robustness_assessment": {
+    "Climate Stress": {
+      "verdict": "SENSITIVE",
+      "mean_max_pct_change": 29.05
+    },
+    "Crisis Threshold": {
+      "verdict": "SENSITIVE",
+      "mean_max_pct_change": 28.51
+    },
+    "Reward Weights": {
+      "verdict": "HIGHLY SENSITIVE",
+      "mean_max_pct_change": 41.19
+    },
+    "Episode Length": {
+      "verdict": "HIGHLY SENSITIVE",
+      "mean_max_pct_change": 42.51
+    }
+  },
+  "heatmap_values": {
+    "Climate Stress": {
+      "Adv-Low": 51.77,
+      "EM-Med": 33.01,
+      "Dev-High": 24.3
+    },
+    "Crisis Threshold": {
+      "Adv-Low": 33.76,
+      "EM-Med": 34.02,
+      "Dev-High": 39.49
+    },
+    "Reward Weights": {
+      "Adv-Low": 43.1,
+      "EM-Med": 34.29,
+      "Dev-High": 61.91
+    },
+    "Episode Length": {
+      "Adv-Low": 61.52,
+      "EM-Med": 51.18,
+      "Dev-High": 27.86
+    }
+  }
+}

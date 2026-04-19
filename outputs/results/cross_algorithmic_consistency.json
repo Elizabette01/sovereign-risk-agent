@@ -1,0 +1,29 @@
+{
+  "agreement_rates": {
+    "Advanced_Low": 35.34,
+    "Advanced_Medium": 27.22,
+    "Advanced_High": 4.1,
+    "Emerging_Market_Low": 46.2,
+    "Emerging_Market_Medium": 26.36,
+    "Emerging_Market_High": 53.61,
+    "Developing_Low": 59.49,
+    "Developing_Medium": 50.36,
+    "Developing_High": 73.99
+  },
+  "mean_agreement_rate": 41.85,
+  "rank_correlations": {
+    "terminal_debt": {
+      "rho": 0.8167,
+      "p_value": 0.0072
+    },
+    "cumulative_reward": {
+      "rho": 0.9833,
+      "p_value": 0.0
+    },
+    "crisis_rate": {
+      "rho": 0.8619,
+      "p_value": 0.0028
+    }
+  },
+  "n_profiles_in_correlation": 9
+}
