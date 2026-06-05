@@ -1,19 +1,15 @@
 """
 dynamics.py — Transition functions for the Sovereign Risk Gymnasium environment.
 
-This module contains the economic mechanics of the simulation. Each function
-corresponds to one part of the government's fiscal environment:
+This module contains the economic mechanics of the simulation. Each function corresponds to one part of the government's fiscal environment:
 
-1. generate_growth     — AR(1) GDP growth process
+1. generate_growth — AR(1) GDP growth process
 2. generate_interest_rate — random-walk interest rate
 3. generate_climate_shock — two-stage climate damage model
-4. compute_next_debt   — government budget constraint (accounting identity)
+4. compute_next_debt — government budget constraint (accounting identity)
 5. update_adaptation_capital — ND-GAIN readiness capital accumulation
 
-Design principle: every function is pure (no side effects, no global state)
-and accepts the Gymnasium-managed RNG (np.random.Generator) rather than
-calling np.random directly. This ensures all randomness is seed-controlled
-from the environment's reset() call.
+Design principle: every function is pure (no side effects, no global state) and accepts the Gymnasium-managed RNG (np.random.Generator) rather than calling np.random directly. This ensures all randomness is seed-controlled from the environment's reset() call.
 """
 
 from __future__ import annotations
@@ -29,9 +25,9 @@ from .config import ProfileConfig
 logger = logging.getLogger(__name__)
 
 
-# ---------------------------------------------------------------------------
+# -----------------------------------------------------------
 # 1. GDP Growth Process
-# ---------------------------------------------------------------------------
+# -----------------------------------------------------------
 
 def generate_growth(
     prev_growth: float,
@@ -41,22 +37,17 @@ def generate_growth(
     """Generate next-period real GDP growth using a calibrated AR(1) process.
 
     Economic rationale:
-    Growth is persistent — a recession year tends to be followed by another
-    weak year — but mean-reverts toward the long-run average (growth_base).
+    Growth is persistent — a recession year tends to be followed by another weak year — but mean-reverts toward the long-run average (growth_base).
     This is captured by an AR(1) model:
 
         g(t) = μ(1 − ρ) + ρ·g(t−1) + ε(t)
 
     where μ = growth_base, ρ = growth_ar1_coef, and ε ~ F(0, σ).
 
-    The innovation ε can be drawn from a normal or Student's t distribution,
-    depending on which fit better during calibration. The t
-    distribution has heavier tails, better capturing the large growth collapses
-    seen during financial crises (−10% in 2009) and COVID (−15% in 2020).
+    The innovation ε can be drawn from a normal or Student's t distribution, depending on which fit better during calibration. The t distribution has heavier tails, better capturing the large growth collapses seen during financial crises (−10% in 2009) and COVID (−15% in 2020).
 
     For Student's t: we draw from standard_t(df) and scale by shock_std.
-    The standard_t distribution has unit variance (for df > 2), so this scaling
-    gives the correct calibrated volatility.
+    The standard_t distribution has unit variance (for df > 2), so this scaling gives the correct calibrated volatility.
 
     Parameters
     ----------
@@ -109,14 +100,9 @@ def generate_interest_rate(
     """Generate next-period real interest rate via a random walk with drift.
 
     Economic rationale:
-    Real interest rates are highly persistent and do not strongly mean-revert
-    over short horizons. A random walk with drift is the standard representation
-    for nominal/real rates in the fiscal sustainability literature
-    (Blanchard, 2019; IMF WP/19/155).
+    Real interest rates are highly persistent and do not strongly mean-revert over short horizons. A random walk with drift is the standard representation for nominal/real rates in the fiscal sustainability literature (Blanchard, 2019; IMF WP/19/155).
 
-    The drift (rate_shock_mean) is typically small and positive, reflecting the
-    slow normalisation of rates from the post-GFC low-rate environment. The
-    volatility (rate_shock_std) captures uncertainty around future rate paths.
+    The drift (rate_shock_mean) is typically small and positive, reflecting the slow normalisation of rates from the post-GFC low-rate environment. The volatility (rate_shock_std) captures uncertainty around future rate paths.
 
         r(t) = r(t−1) + ε(t),  ε ~ N(rate_shock_mean, rate_shock_std)
 
@@ -157,26 +143,17 @@ def generate_climate_shock(
     """Generate climate damage and its impact on the primary fiscal balance.
 
     Economic rationale:
-    Climate disasters are rare but potentially large. The generating process
-    has two stages:
+    Climate disasters are rare but potentially large. The generating process has two stages:
 
     Stage 1 — Event occurrence:
-        Each year, a disaster occurs with probability p (Bernoulli draw).
-        This probability is calibrated from the EM-DAT disaster database and
-        ND-GAIN vulnerability scores.
+        Each year, a disaster occurs with probability p (Bernoulli draw). This probability is calibrated from the EM-DAT disaster database and ND-GAIN vulnerability scores.
 
     Stage 2 — Damage magnitude (conditional on event):
-        If an event occurs, damage is drawn from a truncated normal distribution
-        with mean = climate_conditional_mean and std = climate_conditional_std.
-        The draw is floored at 0 (damage cannot be negative) and capped at
-        climate_max_damage (typically 10% of GDP) to prevent unrealistic extremes.
+        If an event occurs, damage is drawn from a truncated normal distribution with mean = climate_conditional_mean and std = climate_conditional_std.
+        The draw is floored at 0 (damage cannot be negative) and capped at climate_max_damage (typically 10% of GDP) to prevent unrealistic extremes.
 
     Stage 3 — Fiscal impact:
-        Only disasters exceeding 1% of GDP trigger a meaningful fiscal response.
-        Below this threshold the government can absorb costs through existing
-        contingency funds without affecting the primary balance.
-        The fiscal cost is scaled proportionally to the damage drawn, anchored
-        to the calibrated climate_fiscal_cost for an average major event.
+        Only disasters exceeding 1% of GDP trigger a meaningful fiscal response. Below this threshold the government can absorb costs through existing contingency funds without affecting the primary balance. The fiscal cost is scaled proportionally to the damage drawn, anchored to the calibrated climate_fiscal_cost for an average major event.
 
     Parameters
     ----------
@@ -190,8 +167,7 @@ def generate_climate_shock(
     Tuple[float, float]:
         (damage_pct_gdp, fiscal_cost)
         - damage_pct_gdp: climate damage as % of GDP (0.0 if no event)
-        - fiscal_cost: impact on primary balance in pp of GDP
-                       (negative = worsening; 0 if no event or damage < 1%)
+        - fiscal_cost: impact on primary balance in pp of GDP (negative = worsening; 0 if no event or damage < 1%)
     """
     # Stage 1: does an event occur this year?
     event_occurs = rng.random() < config.climate_event_probability
@@ -229,8 +205,7 @@ def compute_next_debt(
 ) -> float:
     """Compute next-period debt-to-GDP using the government budget constraint.
 
-    This is an accounting identity derived from the government's intertemporal
-    budget constraint (Blanchard, 1990):
+    This is an accounting identity derived from the government's intertemporal budget constraint (Blanchard, 1990):
 
         d(t) = [(1 + r/100) / (1 + g/100)] × d(t−1) − pb(t) + sf(t)
 
@@ -247,8 +222,7 @@ def compute_next_debt(
         Primary surplus (pb > 0) → lower debt (directly reduces stock)
         Stock-flow (sf) → captures privatisations, recapitalisations, etc.
 
-    Note: this identity is in levels (not changes). The ratio r/(1+g) is the
-    "snowball effect" — if r > g, debt grows even with a balanced budget.
+    Note: this identity is in levels (not changes). The ratio r/(1+g) is the "snowball effect". If r > g, debt grows even with a balanced budget.
     This is the mechanism behind the "r−g" literature (Blanchard, 2019).
 
     Parameters
@@ -302,18 +276,12 @@ def update_adaptation_capital(
 ) -> float:
     """Update adaptation capital based on policy choice and climate damage received.
 
-    Adaptation capital is proxied by the ND-GAIN Readiness Index, which measures
-    a country's ability to leverage investments for adaptation actions. It covers
-    economic readiness, governance readiness, and social readiness.
+    Adaptation capital is proxied by the ND-GAIN Readiness Index, which measures a country's ability to leverage investments for adaptation actions. It covers economic readiness, governance readiness, and social readiness.
 
     The dynamic is:
-    - Without investment, the index decays slowly (−0.002/year) as infrastructure
-      ages and institutional capacity erodes without maintenance.
-    - Active adaptation investment (action 5) adds +0.005/year — a realistic rate
-      consistent with ND-GAIN readiness improvements of ~0.005–0.01/year in
-      countries with sustained national adaptation plans (UNEP, 2023).
-    - Climate damage erodes capital (−0.001 × damage_pct_gdp) — major disasters
-      destroy adaptive infrastructure: roads, hospitals, communication networks.
+    - Without investment, the index decays slowly (−0.002/year) as infrastructure ages and institutional capacity erodes without maintenance.
+    - Active adaptation investment (action 5) adds +0.005/year — a realistic rate consistent with ND-GAIN readiness improvements of ~0.005–0.01/year in countries with sustained national adaptation plans (UNEP, 2023).
+    - Climate damage erodes capital (−0.001 × damage_pct_gdp) — major disasters destroy adaptive infrastructure: roads, hospitals, communication networks.
 
     The index is bounded to [0, 1] (the ND-GAIN readiness scale).
 

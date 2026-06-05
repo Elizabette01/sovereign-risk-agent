@@ -1,18 +1,11 @@
 """
 config.py — Profile configuration loader for the Sovereign Risk Gymnasium environment.
 
-Each of the 9 cells in the 3x3 (economy type × climate risk tier) matrix has a
-distinct set of calibrated parameters stored in transition_parameters.json. This
-module reads those parameters into a structured dataclass so the rest of the
-codebase can access them by name rather than by dictionary key.
+Each of the 9 cells in the 3x3 (economy type × climate risk tier) matrix has a distinct set of calibrated parameters stored in transition_parameters.json. This module reads those parameters into a structured dataclass so the rest of the codebase can access them by name rather than by dictionary key.
 
 Design rationale:
-- Using a dataclass rather than a plain dict makes autocomplete and type checking
-  work properly, and means a typo ("growht_base") raises an AttributeError at
-  load time rather than silently returning None during a training run.
-- The two data-quality fixes (Advanced_High sparse cell substitutions and the
-  Emerging Market climate fiscal cost sign correction) are applied here, centrally,
-  so every downstream user automatically gets the corrected values.
+- Using a dataclass rather than a plain dict makes autocomplete and type checking work properly, and means a typo ("growht_base") raises an AttributeError at load time rather than silently returning None during a training run.
+- The two data-quality fixes (Advanced_High sparse cell substitutions and the Emerging Market climate fiscal cost sign correction) are applied here, centrally, so every downstream user automatically gets the corrected values.
 """
 
 from __future__ import annotations
@@ -66,16 +59,15 @@ class ProfileConfig:
     initial_adaptation_capital: float
     initial_risk_premium: float
 
-    # -----------------------------------------------------------------------
+    # ------------------------------------------------------------
     # Debt dynamics — stock-flow adjustment
     # The stock-flow term captures everything outside the standard debt
-    # accumulation identity: privatisations, bank recapitalisations, exchange-
-    # rate revaluations, statistical discrepancies, etc.
-    # -----------------------------------------------------------------------
+    # accumulation identity: privatisations, bank recapitalisations, exchange-rate revaluations, statistical discrepancies, etc.
+    # ------------------------------------------------------------
     stock_flow_mean: float     # mean of annual stock-flow adjustment (% GDP)
     stock_flow_std: float      # standard deviation (% GDP)
 
-    # -----------------------------------------------------------------------
+    # ---------------------------------------------------------
     # GDP growth AR(1) process
     # Growth is persistent — a recession year tends to be followed by another
     # weak year — but mean-reverts toward growth_base.
